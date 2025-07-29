@@ -35,5 +35,4 @@ If you want to run a local instance of Prisma rather than use the services on th
 
 
 ##### Revolut
-refer to devops repo https://github.com/Synkd-Life/devops
 consists of guidelines for revolut auth, access and refreshtoken guides
