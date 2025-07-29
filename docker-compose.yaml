@@ -1,0 +1,36 @@
+version: '3'
+services:
+  prisma:
+    image: registry-intl.eu-west-1.aliyuncs.com/inslondon/prisma:1.34
+    restart: always
+    ports:
+    - "4466:4466"
+    environment:
+      PRISMA_CONFIG: |
+        port: 4466
+        # uncomment the next line and provide the env var PRISMA_MANAGEMENT_API_SECRET=my-secret to activate cluster security
+        # managementApiSecret: my-secret
+        databases:
+          default:
+            rawAccess: true
+            connector: mongo
+            # uri: 'mongodb://host.docker.internal:27017'
+            uri: 'mongodb://db_prod:MBS5UcM9vA3ZAzmL@18.196.233.147:27017/synkd-trial101'
+            database: "synkd-trial101"
+#   mongo:
+#     image: mongo:4.2
+#     restart: always
+#     # Uncomment the next two lines to connect to your your database from outside the Docker environment, e.g. using a database GUI like Compass
+#     # ports:
+#     # - "27017:27017"
+#     # environment:
+#       # MONGO_INITDB_ROOT_USERNAME: prisma
+#       # MONGO_INITDB_ROOT_PASSWORD: prisma
+#     ports:
+#       - "27017:27017"
+#     volumes:
+#       - mongo:/var/lib/mongo
+# volumes:
+#   mongo:
+
+  # mongodb://db_prod:MBS5UcM9vA3ZAzmL@18.195.163.150:27017/synkd-trial101

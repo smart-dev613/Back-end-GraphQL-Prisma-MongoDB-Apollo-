@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "app.fullname" . }}
+  labels:
+    app: {{ template "app.name" . }}
+    chart: {{ template "app.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ template "app.name" . }}
+      chart: {{ template "app.chart" . }}
+      release: {{ .Release.Name }}
+  replicas: {{ .Values.app.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "app.name" . }}
+        chart: {{ template "app.chart" . }}
+        component: {{ .Values.app.name }}
+        release: {{ .Release.Name }}
+    spec:
+      imagePullSecrets:
+      - name: regsecret
+      containers:
+      - name: "{{ template "app.fullname" . }}"
+        image: {{.Values.image.address}}
+        imagePullPolicy: {{ .Values.image.pullPolicy | quote }}
+        envFrom:      
+        - configMapRef:
+            name: graphql-api-config
+            # newdev-config
+            # name: graphql-newdev-config
+        {{- if (eq "default" .Release.Namespace)}}
+        env:
+        - name: APP_ENV
+          value: "production"
+        {{- else if (eq "dev" .Release.Namespace) }}
+        env:
+        - name: APP_ENV
+          value: "development"
+        {{- end}}
+        {{- if .Values.app.livenessProbe.enabled }}
+        livenessProbe:
+          httpGet:
+            port: {{ .Values.app.livenessProbe.port }}
+            path: {{ .Values.app.livenessProbe.path }}
+          initialDelaySeconds: {{ .Values.app.livenessProbe.initialDelaySeconds }}
+          periodSeconds: {{ .Values.app.livenessProbe.periodSeconds }}
+          timeoutSeconds: {{ .Values.app.livenessProbe.timeoutSeconds }}
+          successThreshold: {{ .Values.app.livenessProbe.successThreshold }}
+          failureThreshold: {{ .Values.app.livenessProbe.failureThreshold }}
+        {{- end }}
+        {{- if .Values.app.readinessProbe.enabled }}
+        readinessProbe:
+          httpGet:
+            port: {{ .Values.app.livenessProbe.port }}
+            path: {{ .Values.app.livenessProbe.path }}          
+          initialDelaySeconds: {{ .Values.app.readinessProbe.initialDelaySeconds }}
+          periodSeconds: {{ .Values.app.readinessProbe.periodSeconds }}
+          timeoutSeconds: {{ .Values.app.readinessProbe.timeoutSeconds }}
+          successThreshold: {{ .Values.app.readinessProbe.successThreshold }}
+          failureThreshold: {{ .Values.app.readinessProbe.failureThreshold }}
+        {{- end }}
+        resources:
+{{ toYaml .Values.app.resources | indent 10 }}

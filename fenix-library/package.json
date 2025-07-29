@@ -1,0 +1,29 @@
+{
+  "name": "fenix-library",
+  "version": "1.0.0",
+  "description": "Implementation of new media serving library using Fenix",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inspired-mobile/fenix-library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inspired-mobile/fenix-library/issues"
+  },
+  "homepage": "https://github.com/inspired-mobile/fenix-library#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-javascript-obfuscator": "^1.1.6",
+    "gulp-replace": "^1.0.0"
+  }
+}

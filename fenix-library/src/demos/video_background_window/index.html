@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Standard html page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="./a/css/m.css" />
+	<style>
+		.cts {
+			position: absolute;
+			width: 100%;
+			height: 81%;
+			left: 0;
+			bottom: 0;
+			z-index: 9999999999;
+		}
+	</style>
+</head>
+
+<body>
+	<script>
+		var data = {
+			0: {
+				video: './a/videos/1_BVW_video.mp4'
+			}
+		};
+	</script>
+
+	<a class="cts"></a>
+	<div id="banner">
+		<div style="position:relative;width:100%;height:100%">
+			<video id="video" autoplay muted playsinline>
+				<source src="./a/videos/1_BVW_video.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div id="content">
+			<div class="text2"></div>
+			<div class="text3"></div>
+			<div class="text4"></div>
+			<div class="text5"></div>
+			<div class="text6"></div>
+			<div class="logo7"></div>
+			<div class="logo8"></div>
+			<div class="button"></div>
+		</div>
+		<div class="soundOn"></div>
+		<div class="soundOff"></div>
+		<div class="replay"></div>
+	</div>
+</body>
+<!-- <script src="https://cdn1.inspired-mobile.com/creativeHelper.js"></script> -->
+<script src="../../creativeHelper.js"></script>
+<script type="text/javascript" src="./a/js/events.js"></script>
+<script type="text/javascript" src="./a/js/m.js"></script>
+</script>
+
+</html>

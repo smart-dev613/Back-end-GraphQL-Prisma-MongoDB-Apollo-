@@ -1,0 +1,1 @@
+// Format specific code for dynamic banners

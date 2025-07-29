@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>%%title%%</title>
+
+  <style>
+    html, body {
+      min-height: 100vh;
+      min-width: 100vw;
+      padding: 0;
+      margin: 0;
+      font-family: 'Calibri';
+    }
+    .container {
+      box-sizing: border-box;
+      padding: 62px 96px;
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+
+    .header .logo {
+      margin-bottom: 40px;
+      height: 27px;
+    }
+    .header .logo img {
+      height: 100%;
+    }
+    .header .information {
+      display: flex;
+      font: 12px 'Calibri';
+      line-height: 14px;
+    }
+    .header .information .title {
+      font: 29px 'Calibri';
+      line-height: 36px;
+      text-transform: uppercase;
+    }
+    .header .information .subtitle {
+      font: bold 12px 'Calibri';
+      line-height: 14px;
+    }
+    .header .information .address {
+      font: 12px 'Calibri';
+      line-height: 14px;
+      padding: 16px;
+    }
+
+    .col-6 {
+      width: 50%;
+    }
+    .col-3 {
+      width: 25%;
+    }
+    .mt-2 {
+      margin-top: 24px;
+    }
+
+    .content {
+        margin-top: 80px;
+    }
+
+    .content table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+
+    .content table thead {
+      border-bottom: 2px solid black;
+      font-size: 12px;
+    }
+    .content table th {
+      padding: 2px 0;
+    }
+    .content table td {
+      padding: 4px 0;
+    }
+    .content table tbody tr {
+      border-bottom: 1px solid #bfbfbf;
+      font-size: 12px;
+    }
+    .content table .total {
+      font-weight: bold;
+    }
+
+    .text-uppercase {
+      text-transform: uppercase;
+    }
+    .text-left {
+      text-align: left;
+    }
+    .text-right {
+      text-align: right;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .no-border-bottom {
+      border-bottom: none !important;
+    }
+    .border-bottom {
+      border-bottom: 1px solid black;
+    }
+    .border-bottom {
+      border-top: 1px solid black;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .footer p {
+      margin: 2px 0;
+      font: 11px 'Calibri';
+      color: #898989;
+      line-height: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <div class="header">
+        <div class="logo">
+          <img src="%%logo%%">
+        </div>
+
+        <div class="information">
+          <div class="col-6">
+            <div class="title">Invoice</div>
+            <div class="address">
+              <div>%%username%%</div>
+              <div>%%username%%</div>
+              <div>%%useraddress%%</div>
+              <div>%%usercity%%, %%usercounty%% %%userpostcode%%</div>
+              <div>%%usercountry%%</div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="subtitle">Order Date</div>
+            <div>%%createddate%%</div>
+            <div class="subtitle mt-2">Invoice Number</div>
+            <div>%%invoicenumber%%</div>
+            <div class="subtitle mt-2">Reference</div>
+            <div>%%reference%%</div>
+          </div>
+          <div class="col-3">
+            <div>%%companyname%%</div>
+            <div>%%companyaddress%%</div>
+            <div>%%companycity%%, %%companycounty%% %%companypostcode%%</div>
+            <div>%%companycountry%%</div>
+            <div class="subtitle mt-2">VAT Number</div>
+            <div>%%vatNum%%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <table>
+          <thead>
+            <tr>
+              <th class="text-left" colspan="3">Description</th>
+              <th class="text-left" colspan="1.5">Quantity</th>
+              <th class="text-right">Unit Amount</th>
+              <th class="text-right">Amount <span class="text-uppercase">%%currency%%</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            %%invoiceitems%%
+            <!-- <tr>
+              <td class="text-left" colspan="3">1</td>
+              <td class="text-left" colspan="1.5">2</td>
+              <td class="text-right">3</td>
+              <td class="text-right">4</td>
+            </tr> -->
+            <tr class="no-border-bottom">
+              <td class="text-left" colspan="3"></td>
+              <td class="text-left" colspan="1.5"></td>
+              <td class="text-right">Discount</td>
+              <td class="text-right">%%discount%%</td>
+            </tr>
+            <tr class="no-border-bottom">
+              <td class="text-left" colspan="3"></td>
+              <td class="text-left" colspan="1.5"></td>
+              <td class="text-right">Subtotal</td>
+              <td class="text-right">%%subtotal%%</td>
+            </tr>
+            <tr class="no-border-bottom">
+              <td class="text-left" colspan="3"></td>
+              <td class="text-left" colspan="1.5"></td>
+              <td class="text-right">Tax</td>
+              <td class="text-right">%%tax%%</td>
+            </tr>
+            <tr class="no-border-bottom total">
+              <td class="text-left" colspan="3"></td>
+              <td class="text-left" colspan="1.5"></td>
+              <td class="text-right border-top border-bottom text-uppercase">Total</td>
+              <td class="text-right border-top border-bottom">%%total%%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="footer">
+      <!-- <p><span class="company-name">Synkd Ltd</span>, 7 Bell Yard, London, WC2A 2JR, United Kingdom</p>
+      <p>A Company Registered in England and Wales with Company Number 8347099 – VAT Number GB 219799845</p> -->
+      <p class="text-center">%%footer%%</p> <br/>
+      <p class="text-center">%%disclaimer%%</p>
+    </div>
+  </div>
+</body>
+</html>

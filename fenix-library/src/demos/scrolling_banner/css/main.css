@@ -1,0 +1,353 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* shared */
+
+#container {
+  position: relative;
+  overflow: hidden;
+}
+
+#container #bg {
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+#container #logo,
+#container #cta {
+  position: absolute;
+}
+
+#container #logo,
+#container #watch,
+#container #aga,
+#container #tennis {
+  position: absolute;
+}
+
+
+/* 300x250 */
+
+#container.banner300250 {
+  width: 300px;
+  height: 250px;
+}
+
+#container.banner300250 #bg {
+  background: url(../img/bg_mpu.jpg) center top no-repeat;
+  background-size: 100% auto;
+}
+
+#container.banner300250 #logo {
+  width: 81px;
+  height: 27px;
+  left: 35px;
+  top: 19px;
+  background: url(../img/logo.svg) center center no-repeat;
+  background-size: 100% auto;
+}
+
+#container.banner300250 #cta {
+  width: 103px;
+  height: 12px;
+  background: url(../img/cta.svg) center center no-repeat;
+  background-size: 100% auto;
+  left: 156px;
+  top: 18px;
+  opacity: 0;
+}
+
+#container.banner300250 #watch {
+  width: 150px;
+  height: 250px;
+  left: 134px;
+  top: 72px;
+  background: url(../img/watch_mpu.png) center center no-repeat;
+  background-size: 100% auto;
+  z-index: 99999;
+}
+body.alternative #container.banner300250 #watch {top: 110px;}
+#container.banner300250 #aga {
+  width: 101px;
+  height: 19px;
+  background: url(../img/aga.svg) center center no-repeat;
+  background-size: 100% auto;
+  left: 25px;
+  top: 50px;
+}
+
+#container.banner300250 #tennis {
+  width: 35px;
+  height: 42px;
+  background: url(../img/tennis_mpu.svg) center center no-repeat;
+  background-size: 100% auto;
+  left: 260px;
+  top: 206px;
+}
+
+
+/* 300x600 */
+
+#container.banner300600 {
+  width: 300px;
+  height: 600px;
+}
+
+#container.banner300600 #bg {
+  background: url(../img/bg_half.jpg) center top no-repeat;
+  background-size: 100% auto;
+}
+
+#container.banner300600 #logo {
+  width: 91px;
+  height: 30px;
+  left: 105px;
+  top: 285px;
+  background: url(../img/logo.svg) center center no-repeat;
+  background-size: 100% auto;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* shared */
+
+#container {
+  position: relative;
+  overflow: hidden;
+}
+
+#container #bg {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+#container #logo,
+#container #cta {
+  position: absolute;
+}
+
+#container #logo,
+#container #watch,
+#container #aga,
+#container #tennis {
+  position: absolute;
+}
+
+
+/* 300x250 */
+
+#container.banner300250 {
+  width: 300px;
+  height: 250px;
+}
+
+#container.banner300250 #bg {
+  background: url(../img/bg_mpu.jpg) center top no-repeat;
+  background-size: 100% auto;
+  width: 375px;
+}
+
+#container.banner300250 #logo {
+  width: 81px;
+  height: 27px;
+  left: 35px;
+  top: 19px;
+  background: url(../img/logo.svg) center center no-repeat;
+  background-size: 100% auto;
+}
+
+#container.banner300250 #cta {
+  width: 103px;
+  height: 12px;
+  background: url(../img/cta.svg) center center no-repeat;
+  background-size: 100% auto;
+  left: 156px;
+  top: 18px;
+  opacity: 0;
+}
+
+#container.banner300250 #watch {
+  width: 150px;
+  height: 250px;
+  left: 134px;
+  top: 50px;
+  background: url(../img/watch_mpu.png) center center no-repeat;
+  background-size: 100% auto;
+  z-index: 99999;
+}
+body.alternative #container.banner300250 #watch {top: 50px;}
+#container.banner300250 #aga {
+  width: 101px;
+  height: 19px;
+  background: url(../img/aga.svg) center center no-repeat;
+  background-size: 100% auto;
+  left: 25px;
+  top: 220px;
+}
+
+#container.banner300250 #tennis {
+  width: 35px;
+  height: 42px;
+  background: url(../img/tennis_mpu.svg) center center no-repeat;
+  background-size: 100% auto;
+  left: 260px;
+  top: 206px;
+}
+
+
+/* 300x600 */
+
+#container.banner300600 {
+  width: 300px;
+  height: 600px;
+}
+
+#container.banner300600 #bg {
+  background: url(../img/bg_half.jpg) center top no-repeat;
+  background-size: 100% auto;
+  top: -23%;
+}
+
+#container.banner300600 #logo {
+  width: 91px;
+  height: 30px;
+  left: 105px;
+  top: 285px;
+  background: url(../img/logo.svg) center center no-repeat;
+  background-size: 100% auto;
+}
+
+#container.banner300600 #cta {
+  width: 138px;
+  height: 16px;
+  background: url(../img/cta.svg) center center no-repeat;
+  background-size: 100% auto;
+  left: 145px;
+  top: 493px;
+  opacity: 1;
+}
+
+#container.banner300600 #watch {
+  width: 161px;
+  height: 305px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 34px;
+  background: url(../img/watch_half.png) center center no-repeat;
+  background-size: 100% auto;
+}
+
+#container.banner300600 #aga {
+  width: 118px;
+  height: 22px;
+  background: url(../img/aga.svg) center center no-repeat;
+  background-size: 100% auto;
+  left: 155px;
+  top: 434px;
+}
+
+#container.banner300600 #tennis {
+  width: 82px;
+  height: 26px;
+  background: url(../img/tennis_half.svg) center center no-repeat;
+  background-size: 100% auto;
+  left: 173px;
+  top: 548px;
+}
+
+.animate {
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5 s ease-in-out;
+}
+
+body.alternative #container #bg {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    /* top: -86px; */
+}
+			
+#container.banner300600 #cta {
+  width: 138px;
+  height: 16px;
+  background: url(../img/cta.svg) center center no-repeat;
+  background-size: 100% auto;
+  left: 145px;
+  top: 493px;
+  opacity: 1;
+}
+
+#container.banner300600 #watch {
+  width: 161px;
+  height: 305px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: -34px;
+  background: url(../img/watch_half.png) center center no-repeat;
+  background-size: 100% auto;
+}
+
+#container.banner300600 #aga {
+  width: 118px;
+  height: 22px;
+  background: url(../img/aga.svg) center center no-repeat;
+  background-size: 100% auto;
+  left: 155px;
+  top: 434px;
+}
+
+#container.banner300600 #tennis {
+  width: 82px;
+  height: 26px;
+  background: url(../img/tennis_half.svg) center center no-repeat;
+  background-size: 100% auto;
+  left: 173px;
+  top: 548px;
+}
+
+.animate {
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5 s ease-in-out;
+}
+
+body.alternative #container #bg {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    /* top: -86px; */
+}
+#cts{
+  	position:absolute;
+  	margin:auto;
+  	left:0;
+  	right:0;
+  	top:0;
+  	bottom:0;
+  	cursor:pointer;
+  	z-index: 99999;
+  }		

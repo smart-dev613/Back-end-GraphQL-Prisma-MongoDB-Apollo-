@@ -1,0 +1,26 @@
+{
+    "disclosures": [
+      {
+        "identifier": "FenixToken",
+        "type": "cookie",
+        "maxAgeSeconds": 86400,
+        "cookieRefresh": false,
+        "domain": "my.synkd.life", 
+        "purposes": [1,3]
+      }
+    ],
+    "domains": [
+        {
+          "domain": "my.synkd.life",
+          "use": "Retargeting and conversion tracking"
+        },
+        {
+          "domain": "builds.byinspired.com",
+          "use": "Static CSS and JavaScript"
+        },
+        {
+          "domain": "api.synkd.life",
+          "use": "Ad server and tracking"
+        }
+      ]
+  }

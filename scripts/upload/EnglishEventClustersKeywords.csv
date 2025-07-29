@@ -1,0 +1,11 @@
+﻿Attendees ,Companys,Agenda , Itinerary ,Menu, Services,Shop or Store,Gift List ,Prize , Table Plan, Seat Plan,Room,Online Consultation,Employee / Admins ,Training Course,Tickets,Purchases,Entry
+Invited,Invited,Day 1 - Agenda 1,Day 1 - Itinerary 1,Menu 1,Service 1,Product 1,No Gift (required),No Prize,Table 1,Seat 1,Room 1,Yes,Employee Invited,Course 1,Free,1,Yes
+Attending,Companys,Day 1 - Agenda 2,Day 1 - Itinerary 2,Menu 2,Service 2,Product 2,Gift item 1,Prize 1,Table 2,Seat 2,Room 2,No,Employee Attending ,Course 2,Bronze,2,No
+,,Day 2 - Agenda 1,Day 2 - Itinerary 1,Menu 3,Service 3,Product 3,Gift item 2,Prize 2,Table 3,Seat 3,Room 3,,,Course 3,Silver,3,
+,,Day 2 - Agenda 2,Day 2 - Itinerary 2,Menu 4,Service 4,,Gift item 3,Prize 3,Table 4,Seat 4,Room 4,,,Course 4,Gold,4,
+,,,,,,,Gift item 4,Prize 4,Table 5,Seat 5,Room 5,,,Course 5,Platinum,5,
+,,,,,,,Charity Donation 1,Prize 5,Table 6,Seat 6,Room 6,,,,,6,
+,,,,,,,Charity Donation 2,Prize 6,Table 7,Seat 7,,,,,,7,
+,,,,,,,Charity Donation 3,Prize 7,,,,,,,,8,
+,,,,,,,,,,,,,,,,9,
+,,,,,,,,,,,,,,,,10,

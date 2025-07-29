@@ -1,0 +1,9 @@
+apiVersion: v1
+name: inspired-graphql
+version: 0.0.4
+appVersion: v1.0.0
+description: Inspired Mobile Limited
+home: https://byinspired.com
+maintainers:
+- name: inspired
+  email: rishabh@byinspired.com

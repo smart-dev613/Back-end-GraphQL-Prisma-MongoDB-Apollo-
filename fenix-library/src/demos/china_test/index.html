@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Size Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      height: 100%;
+      width: 100%;
+      padding: 0px;
+      margin: 0px
+    }
+    #container {
+      background-color: #E6E6E6;
+      height: 100%;
+      overflow: hidden;
+      width: 100%;
+    }
+    #container img {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <img src="./img/inspired_logo.png" alt="inspired_logo">
+  </div>
+
+  <script src="https://cdn1.inspired-mobile.com/creativeHelper.js"></script>
+  <script>
+    onFenixReady(function () {
+      window.addEventListener(
+        'click',
+        function (e) {
+          console.log('sending click')
+          sendEvent('click_to_site')
+        },
+        false
+      )
+    })
+  </script>
+</body>
+
+</html>

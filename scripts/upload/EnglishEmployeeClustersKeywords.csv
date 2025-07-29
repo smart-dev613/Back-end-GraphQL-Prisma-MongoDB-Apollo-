@@ -1,0 +1,1110 @@
+﻿Employee Department Category,Employee Role,Employee Role Title,Monthly Income Range,Availability,Work Preferences,Years of Experience,Skills ,Soft skills,Work Travel preferences,Relocation willingness,Adaptability to change,Certifications/licenses,Other Skills
+Administration,Actor,Company Director,0 - 250,Full-time,Remote,Less than 1 year,Analytical,Communication,Frequent travel,Open to relocation,Open to new technologies,PMP (Project Management Professional),Google Calendar
+Aerospace & Defence,Entertainer,Business Owner,251 - 500,Part-time,Hybrid,1-2 years,Detail Oriented,Active listening,Limited travel,No relocation preference,Willing to learn new skills,CPA (Certified Public Accountant),Microsoft Teams
+Agriculture,Presenter,Investor,501 - 750,Freelance,On-site,3-5 years,Tech-Savvy,Problem-solving,No travel,Relocation within the same city,Flexible with priorities,CISSP (Certified Information Systems Security Professional),Notion
+Architecture,Actuary,Shareholder,751 - 1000,Contract,Flexible hours,6-9 years,Good Communicator,Critical thinking,Domestic travel only,Relocation within the same state,Comfortable with uncertainty,CSM (Certified Scrum Master),Calendly
+"Arts, Entertainment & Recreation",Economist,CEO,"1,001 - 1,250",Temporary,Fixed schedule,10-14 years,Focused,Adaptability,International travel,Relocation within the same country,Quick to adapt processes,AWS Certified Solutions Architect,Google Meet
+Beauty,Statistician,CFO,"1,251 - 1,500",Internship,Independent work,15-19 years,Conscientious,Time management,Short-term trips,Open to international relocation,Resilient during change,CCNA (Cisco Certified Network Associate),Slack Connect
+Construction Repair & Maintenance Services,Print Creative,CTO,"1501 - 2,000",On-call,Team collaboration,20+ years,Creative,Teamwork,Long-term assignments,,Embraces innovation,"Six Sigma (Green Belt, Black Belt)",Acuity Scheduling
+Education,Digital Creative,CMO,"2,001 - 2,500",Project-based,Fast-paced,,Critical Thinker,Collaboration,Flexible travel schedule,,Adjusts to leadership styles,CFA (Chartered Financial Analyst),Microsoft Word
+"Energy, Mining & Utilities",Advertising Sales,CRO,"2,501 - 3,000",Remote,Structured environment,,Good Leader,Conflict resolution,,,Open to feedback,CEH (Certified Ethical Hacker),Adobe Acrobat Pro
+Entertainment,Digital Advertising Sales,CIO,"3,001 - 3,500",Hybrid,,,Curious,Emotional intelligence,,,Thrives in dynamic environments,CDP (Certified Data Professional),Nitro PDF
+Environment,Public Relations,CHRO,"3,501 - 4,000",On-site,,,Logical,Leadership,,,Adapts work responsibilities,CIA (Certified Internal Auditor),ABBYY FineReader
+Finance,Machinery driver,COO,"4,001 - 4,500",Flexible hours,,,Motivated,Decision-making,,,Manages stress well,CompTIA A+,Kofax OmniPage
+Government & Public Administration,Air traffic control,Executive Director,"4,501 - 5,000",Shift work,,,Problem Solver,Creativity,,,Embraces improvement,CompTIA Security+,Excel
+Healthcare,Air transport,General Counsel,"5,001 - 5,500",Weekend availability,,,Teamplayer,Attention to detail,,,Open to new roles,Microsoft Certified: Azure Fundamentals,Google Sheets
+Hospitality,Travel ,Partner,"5,501 - 6,000",Evening availability,,,Professionalism,Flexibility,,,Adapts communication style,CBAP (Certified Business Analysis Professional),Microsoft Access
+Hotel & Travel Accomodation,Appliances engineer,Managing Partner,"6,001 - 6,500",,,,Considerate,Empathy,,,Flexible with team changes,PE (Professional Engineer),Airtable
+Human Resources & Recruitment,Aircraft maintenance,Vice President,"6,501 - 7,000",,,,Resilient,Persuasion,,,Maintains productivity,CA (Chartered Accountant),AutoHotkey
+IT & Networking,Aircraft pilot,Head (of Team),"7,001 - 8,000",,,,Negotiation,Negotiation,,,Adapts to policy changes,CISA (Certified Information Systems Auditor),TextExpander
+Insurance , Flight engineer,Director (of Team),"8,001 - 9,000",,,,Organized,Stress management,,,Handles customer needs,CHRP (Certified Human Resources Professional),Evernote
+Legal,Ambulance staff,Manager ((of Team),"9,001 - 10,000",,,,Extroverted,Patience,,,Follows industry trends,OSHA (Occupational Safety and Health Administration),Boomerang
+Leisure,Animal care,Senior (within a Team),"10,001 - 11,000",,,,Introverted,Self-motivation,,,Learns from setbacks,CFP (Certified Financial Planner),Cloze
+Management Consulting,Architect,Manager,"11,001 - 12,000",,,,Emotionally Intelligent,Resilience,,,Flexible with work hours,CFE (Certified Fraud Examiner),Superhuman
+Manufacturing,Town Planner,Exec (Jnr),"12,001 - 13,000",,,,Reliable,Interpersonal skills,,,Embraces new tools,NASM (National Academy of Sports Medicine - Certified Personal Trainer),Clockify
+Marketing & Advertising,Archivist,Junior,"13,001 - 14,000",,,,Positive,Accountability,,,Receptive to culture changes,CMA (Certified Management Accountant),RescueTime
+Media & Communications,Curator,Assistant,"14,001 - 15,000",,,,Empathetic,Integrity,,,Adjusts to deadlines,LCSW (Licensed Clinical Social Worker),Toggl
+Non-Profit & NGO,Artist,Apprenctice,"15,001 - 20,000",,,,Open-minded,Customer service,,,Quick learner,CNA (Certified Nursing Assistant),Harvest
+Personal Consumer Services,Digital artist,Trainee,"20,001 - 25,000",,,,Active Listener,Public speaking,,,Open to new approaches,ITIL (Information Technology Infrastructure Library Certification),Trello
+Pet Care,Print artist,Intern,"25,001 - 30,000",,,,Persuasive,Coaching and mentoring,,,Positive attitude through change,CCSP (Certified Cloud Security Professional),Asana
+Pharmaceutical & Biotechnology,Assembler,Freelancer,"30,001 - 35,000",,,,Adaptable,Delegation,,,,CIPP (Certified Information Privacy Professional),ClickUp
+Real Estate,Author,Analyst,"35,001 - 40,000",,,,Prudent,Multitasking,,,,CPSM (Certified Professional in Supply Management),Smartsheet
+Restaurant & Food Services, Translator,Coordinator,"40,001 - 45,000",,,,Empathy,Positive attitude,,,,CQE (Certified Quality Engineer),Wrike
+Retail & Wholesale,Baker,Administrator,"45,001 - 50,000",,,,Financial Literacy,Initiative,,,,FRM (Financial Risk Manager),Microsoft Project
+Sales,Confectioner,Consultant ,"50,001 - 60,000",,,,Foreign Language Proficiency,Open-mindedness,,,,CCP (Certified Cost Professional),KanbanFlow
+Science,Bank clerk,Agent,"60,001 - 70,000",,,,Goal Setting,Adaptability to feedback,,,,CPC (Certified Professional Coach),Targetprocess
+Telecommunications,Post office clerk,Specialist,"70,001 - 80,000",,,,Innovation,Cross-cultural communication,,,,CBET (Certified Biomedical Equipment Technician),Float
+Trade,Bar staff,Generalist,"80,001 - 90,000",,,,Leadership Development,Organizational skills,,,,CNP (Certified Payments Professional),Forecast.app
+,Barrister,Associate,"90,001 - 100,000",,,,Networking,Goal-setting,,,,LMFT (Licensed Marriage and Family Therapist),Resource Guru
+, Judge,Representative,"100,001 - 150,000",,,,Organization,Influencing others,,,,CPM (Certified Public Manager),Lucidchart
+,Beautician,Contractor,"150,001 - 200,000",,,,Presentation Skills,Relationship-building,,,,PHR (Professional in Human Resources),Visio
+,Biological scientist,Technician ,"200,001 - 250,000",,,,Project Management,Reliability,,,,CEM (Certified Emergency Manager),Bizagi
+,Biochemist,Entry-level,"250,000+",,,,Research Skills,Decision-making under pressure,,,,CWI (Certified Welding Inspector),Miro
+,Boat and ship builder,Mid-level,,,,,Risk Management,Self-discipline,,,,CSCP (Certified Supply Chain Professional),MURAL
+,Book-keeper,Lead,,,,,Self-Confidence,Work ethic,,,,RN (Registered Nurse),MindMeister
+,Payroll ,Skilled Worker,,,,,Stress Management,,,,,CHES (Certified Health Education Specialist),Xmind
+,Wages clerk,Manual Worker,,,,,Technical Skills,,,,,CITP (Certified International Trade Professional),Confluence
+,Bricklayer,Domestic Worker,,,,,Troubleshooting,,,,,ACE (American Council on Exercise - Certified Personal Trainer),Document360
+,Mason,Homemaker,,,,,Verbal Communication,,,,,CIMA (Certified Investment Management Analyst),Guru
+,Broker,Office Worker,,,,,Visual Communication,,,,,,Process Street
+,Building engineer,Part-Time Worker,,,,,Writing Skills,,,,,,Typeform
+,Civil engineer,Professional,,,,,Data Analysis,,,,,,JotForm
+,Coach driver,Public Sector,,,,,Digital Literacy,,,,,,Google Forms
+,Project manager,Retired,,,,,Conflict Management,,,,,,Remesh
+,Researcher,Self-Employed,,,,,Strategic Thinking,,,,,,UserGuiding
+,Business Development,Parent,,,,,Collaboration,,,,,,WalkMe
+,Butcher,,,,,,Initiative,,,,,,Appcues
+,Procurement officer,Student,,,,,Problem Identification,,,,,,Concur
+,Contact centre Advisor,Unemployed,,,,,Empowerment,,,,,,TravelPerk
+,Care worker,Freelance,,,,,Cultural Competence,,,,,,Ticketmaster
+,Home carer,,,,,,Adaptation,,,,,,StubHub
+,Career advisor,,,,,,Digital Marketing,,,,,,SeatGeek
+,Vocational guidance specialist,,,,,,Google Ads,,,,,,AXS Ticketing
+,Caretaker,,,,,,WordPress,,,,,,Notepad++
+,Carpenter,,,,,,Instagram Marketing,,,,,,QuickBooks
+,Joiner,,,,,,JavaScript,,,,,,SAP
+,Caterer,,,,,,Python,,,,,,Oracle Financials
+,Accountant,,,,,,PHP,,,,,,Xero
+,Architectural technologist,,,,,,C#,,,,,,Anaplan
+,Chef,,,,,,React,,,,,,Adaptive Insights
+,Chemist,,,,,,C++,,,,,,Sage Accounting
+,Chemical scientist,,,,,,SQL,,,,,,FreshBooks
+,Chief executive,,,,,,Java,,,,,,Wave Accounting
+,Child and early years officer,,,,,,CSS,,,,,,TurboTax
+,Childminder,,,,,,HTML,,,,,,Drake Tax
+,Civil engineer,,,,,,Node.js,,,,,,H&R Block Tax
+,Cleaner,,,,,,HTML5,,,,,,Lacerte
+,Housekeeper,,,,,,MySQL,,,,,,ProConnect Tax Online
+,Clergy,,,,,,Laravel,,,,,,TaxAct Professional
+,Coal miner,,,,,,Microsoft Power BI,,,,,,CCH Axcess Tax
+,Collector salesperson,,,,,,Data Entry,,,,,,IRS e-Services
+,Credit agent,,,,,,Data Science,,,,,,Vertex
+,Communication operator,,,,,,Tableau,,,,,,Avalara
+,Company secretary,,,,,,Looker Studio,,,,,,IRS.gov
+,Conference organiser,,,,,,Business Intelligence,,,,,,Bloomberg Tax & Accounting
+, Exhibition organiser,,,,,,Machine Learning,,,,,,Thomson Reuters ONESOURCE
+,Conservationist,,,,,,Deep Learning,,,,,,Thomson Reuters Checkpoint
+,Environmental professional,,,,,,Data Visualization,,,,,,Expensify
+,Construction supervisor,,,,,,R,,,,,,Dext
+,Construction operator,,,,,,Natural Language Processing,,,,,,GAAP
+,Construction project manager,,,,,,Statistics,,,,,,IFRS
+,Cook,,,,,,Data Mining,,,,,,Fathom
+,Counsellor,,,,,,Computer Vision,,,,,,Spotlight Reporting
+,Crane driver,,,,,,TensorFlow,,,,,,Pricelabs
+,Credit controller,,,,,,Artificial Intelligence,,,,,,Qcue
+,Customer services,,,,,,Print Design,,,,,,Digonex
+,Dancer,,,,,,Web Design,,,,,,Stripe
+,Choreographer,,,,,,Branding,,,,,,PayPal
+,Debt collector,,,,,,Brochure Design,,,,,,Square
+,Dental nurse,,,,,,Packaging Design,,,,,,BILL
+,Dental practitioner,,,,,,Layout Design,,,,,,ADP
+,Design engineer,,,,,,Photo Editing,,,,,,Gusto
+,Dispensing optician,,,,,,Social Media Design,,,,,,Paychex
+,Draughtsperson,,,,,,Figma,,,,,,Salesforce
+,Driving instructor,,,,,,Logo Design,,,,,,HubSpot
+,Education adviser,,,,,,User Interface Design,,,,,,Zoho
+,School inspector,,,,,,Landing Page,,,,,,Microsoft Dynamics
+,Educational support,,,,,,UX & UI,,,,,,Pipedrive
+,Electronic trade,,,,,,Business Development,,,,,,Freshworks
+,Electrician,,,,,,Outbound Sales,,,,,,Freshsales
+,Electronics engineer,,,,,,Email Marketing,,,,,,Power BI
+,Electroplater,,,,,,Sales Development,,,,,,Tableau
+,Energy plant operater,,,,,,Sales Management,,,,,,Google Looker
+,Engineering technician,,,,,,Proofreading,,,,,,QlikView
+,Environment professional,,,,,,Copy Editing,,,,,,Qlik Sense
+,Health professional,,,,,,Content Editing,,,,,,Google Data Studio
+,Estate agent,,,,,,Book Editing,,,,,,Looker
+,Auctioneer,,,,,,Civil Engineering,,,,,,Metabase
+,Estimator,,,,,,Autodesk Revit,,,,,,Google Analytics
+,Valuer,,,,,,Financial Analysis,,,,,,GA4 (Google Analytics 4)
+,Assessor,,,,,,Financial Modeling,,,,,,Stata
+,Farm worker,,,,,,SEO Writing,,,,,,SPSS - IBM
+,Farmer,,,,,,Creative Writing,,,,,,JASP
+,Finance analyst and adviser,,,,,,Editing & Proofreading,,,,,,Jamovi
+,Investment analyst and adviser,,,,,,Accounting,,,,,,G*Power
+,Finance officer,,,,,,Researcher,,,,,,ToolPak
+,Fire service officer,,,,,,Human Resource Management,,,,,,Statsmodels
+,Fishmonger,,,,,,Recruiting,,,,,,Gephi
+,Poultry dresser,,,,,,LinkedIn Recruiting,,,,,,Graphviz
+,Fitness instructor,,,,,,HR & Business Services,,,,,,Cytoscape
+,Floorer,,,,,,Candidate Interviewing,,,,,,Kumu
+,Wall tiler,,,,,,Staff Recruitment & Management,,,,,,Neo4j
+,Florist,,,,,,Candidate Sourcing,,,,,,RDF
+,Footwear trader,,,,,,Sourcing,,,,,,OWL
+,Leather trader,,,,,,Business Operations,,,,,,SPARQL
+,Forestry worker,,,,,,Marketing Operations & Workflow,,,,,,GraphDB
+,Fork-lift truck driver,,,,,,Management Consulting,,,,,,Protégé
+,Furniture maker,,,,,,Business Analysis,,,,,,ArangoDB
+,Craft woodworker,,,,,,Social Media Marketing,,,,,,OrientDB
+,Further education teacher,,,,,,Legal,,,,,,JanusGraph
+,Gardener,,,,,,Legal Research,,,,,,TigerGraph
+,Landscaper,,,,,,Contract Drafting,,,,,,Amazon Neptune
+,Glass and ceramics operator,,,,,,Legal Consulting,,,,,,Google Knowledge Graph API
+,Glazier,,,,,,Contract Law,,,,,,WEKA
+,Graphic designer,,,,,,Intellectual Property Law,,,,,,Orange Data Mining
+,Groundsman,,,,,,Employment Law,,,,,,SQL
+,Greenkeeper,,,,,,Translation,,,,,,Python
+,Hairdresser or Barber,,,,,,Legal Writing,,,,,,R
+,Beautician,,,,,,Autodesk AutoCAD,,,,,,MATLAB
+,Personal Stylist,,,,,,Construction,,,,,,Pandas
+,Health and safety officer,,,,,,Construction Management,,,,,,NumPy
+,Health care practioner ,,,,,,Construction Estimating,,,,,,SciPy
+,Health services,,,,,,Quantity Surveying,,,,,,dplyr
+,Public health & safety,,,,,,Illustration,,,,,,ggplot2
+,Higher education teacher,,,,,,Adobe Photoshop,,,,,,caret
+,Horticulturalist,,,,,,Adobe Illustrator,,,,,,tidyr
+,Porter,,,,,,Graphic Design,,,,,,Great Expectations
+,Hotel manager,,,,,,Drawing,,,,,,Scikit-Learn
+,Housekeeper,,,,,,Character Design,,,,,,TensorFlow
+,Parent,,,,,,Digital Painting,,,,,,Keras
+,Retired,,,,,,Digital Art,,,,,,H2O.ai
+,Residential warden,,,,,,Digital Illustration,,,,,,Google AutoML
+,Housing officer,,,,,,Comic Art,,,,,,DataRobot
+,Human resources,,,,,,Children's Book Illustration,,,,,,AWS SageMaker
+,Industrial relations officer,,,,,,Adobe InDesign,,,,,,Google Vertex AI
+,Importer,,,,,,2D Illustration,,,,,,Azure Machine Learning
+,Information technology,,,,,,Public Relations,,,,,,IBM Watson Studio
+,Telecommunications,,,,,,Media Relations,,,,,,JAX
+, Standards and regulation inspector,,,,,,Copywriting,,,,,,MXNet
+,Insurance underwriter,,,,,,Press Release Writing,,,,,,Caffe
+,IT business analyst,,,,,,Marketing Strategy,,,,,,Caffe2
+,Systems designer,,,,,,Communications,,,,,,kerasR
+,IT engineer,,,,,,Press Release,,,,,,ONNX
+,IT operations technician,,,,,,Microsoft Word,,,,,,TensorRT
+,Journalist,,,,,,Microsoft Office,,,,,,MLflow
+,Newspaper editor,,,,,,Google Docs,,,,,,Triton Inference Server
+,Caterer,,,,,,Typing,,,,,,NLTK
+,Kitchen assistant,,,,,,Customer Support,,,,,,SpaCy
+,Laboratory technician,,,,,,Email Communication,,,,,,Gensim
+,Vehicle driver,,,,,,Microsoft PowerPoint,,,,,,Stanford NLP
+,Lawyer,,,,,,English,,,,,,GPT-based models
+,Legal associate,,,,,,Travel,,,,,,BERT
+,Legal secretary,,,,,,Writing,,,,,,GPT
+,Leisure and sports manager,,,,,,Search Engine Optimization,,,,,,T5
+,Theme park attendant,,,,,,Hospitality & Tourism,,,,,,LLaMA
+,Travel agent,,,,,,Content Writing,,,,,,word2vec
+,Librarian,,,,,,Article Writing,,,,,,GloVe
+,Local government official,,,,,,Blog Writing,,,,,,FastText
+,Management consultant,,,,,,Ghostwriting,,,,,,SuperGLUE
+,Business analyst,,,,,,Academic Writing,,,,,,GLUE
+,Retailer,,,,,,Business Services,,,,,,SQuAD
+,Wholesaler,,,,,,Shopify,,,,,,Common Voice
+,Storage Operator,,,,,,SolidWorks,,,,,,LibriSpeech
+,Warehouse Operator,,,,,,Product Design,,,,,,CNNs
+,Agricultualist,,,,,,3D Modeling,,,,,,RNNs
+,Horticulturalist,,,,,,Mechanical Engineering,,,,,,ResNet
+,Forrester,,,,,,Product Development,,,,,,EfficientNet
+,Fisherman,,,,,,3D Design,,,,,,VGG
+,Marine operative,,,,,,Mechanical Design,,,,,,LSTMs
+,Market trader,,,,,,CAD,,,,,,GRUs
+,Street trader,,,,,,3D Printing,,,,,,StyleGAN
+,Market research interviewer,,,,,,Industrial Design,,,,,,CycleGAN
+,Marketer,,,,,,3D Rendering,,,,,,Google TPUs
+,Sales & Marketing,,,,,,Prototyping,,,,,,AWS Inferentia
+,Digital Marketer,,,,,,Design for Manufacturing,,,,,,Habana Gaudi
+,Mechanical engineer,,,,,,Lead Generation,,,,,,CUDA
+,Medical technician,,,,,,Real Estate,,,,,,cuDNN
+,Dental technician,,,,,,Administrative Support,,,,,,OpenCV
+,Medical practitioner,,,,,,Customer Service,,,,,,YOLO
+,Medical radiographer,,,,,,Microsoft Excel,,,,,,Amazon Rekognition
+,Medical operator,,,,,,Cold Calling,,,,,,Google Cloud Vision API
+,Merchandiser,,,,,,Telemarketing,,,,,,Ximilar
+,Window dresser,,,,,,Appointment Setting,,,,,,Clarifai
+,Metal plate worker,,,,,,Sales,,,,,,Albumentations
+,Riveter,,,,,,Social Media Management,,,,,,fastai
+,Machine operator ,,,,,,,,,,,,DALI
+,Metal worker,,,,,,,,,,,,TorchServe
+,Metal fitter,,,,,,,,,,,,Prolog
+,Midwive,,,,,,,,,,,,Datalog
+,Mobile machine driver,,,,,,,,,,,,Fuzzy Logic Systems
+,Moulder maker,,,,,,,,,,,,DLV
+,Die caster,,,,,,,,,,,,AutoML
+,Musician,,,,,,,,,,,,IBM SPSS Modeler
+,National government official,,,,,,,,,,,,SAS
+,Natural scientist,,,,,,,,,,,,Alteryx
+,Social scientist,,,,,,,,,,,,RapidMiner
+,Nursery support,,,,,,,,,,,,KNIME
+,Nurse,,,,,,,,,,,,Labelbox
+,Occupational therapist,,,,,,,,,,,,Supervisely
+,Office manager,,,,,,,,,,,,V7 Labs
+,Ophthalmic optician,,,,,,,,,,,,Hive Data
+,Packer,,,,,,,,,,,,SuperAnnotate
+,Bottler,,,,,,,,,,,,Dedoose
+,Builder,,,,,,,,,,,,NVivo
+,Painter,,,,,,,,,,,,MAXQDA
+,Decorator,,,,,,,,,,,,Leximancer
+,Paramedic,,,,,,,,,,,,MonkeyLearn
+,Parking enforcer ,,,,,,,,,,,,MeaningCloud
+,Civil enforcer,,,,,,,,,,,,QDA Miner
+,Pensions clerk,,,,,,,,,,,,LIWC
+,Insurer,,,,,,,,,,,,ImageNet
+,Personal assistant,,,,,,,,,,,,COCO
+,Pest control officer,,,,,,,,,,,,CIFAR-10/100
+,Pharmaceutical technician,,,,,,,,,,,,MNIST
+,Pharmacist,,,,,,,,,,,,Fashion-MNIST
+,Tradesman,,,,,,,,,,,,Mailchimp
+,Photographer,,,,,,,,,,,,ConvertKit
+,Audio-visual operator,,,,,,,,,,,,ActiveCampaign
+,Broadcasting operator,,,,,,,,,,,,Klaviyo
+,Physical scientist,,,,,,,,,,,,SEMrush
+,Physiotherapist,,,,,,,,,,,,Ahrefs
+,Planning technician,,,,,,,,,,,,Moz
+,Product technician,,,,,,,,,,,,Surfer SEO
+,Plant operator,,,,,,,,,,,,Clearscope
+,Machine operator,,,,,,,,,,,,Google Ads
+,Plasterer,,,,,,,,,,,,Facebook Ads Manager
+,Playworker,,,,,,,,,,,,Rakuten
+,Plumber,,,,,,,,,,,,Google Optimize
+,Heating engineer,,,,,,,,,,,,VWO
+,Podiatrist,,,,,,,,,,,,UserTesting
+,Community support officer,,,,,,,,,,,,Maze
+,Police officer,,,,,,,,,,,,UsabilityHub
+,Postal worker,,,,,,,,,,,,Optimal Workshop
+,Teaching professional,,,,,,,,,,,,Zapier
+,Printer,,,,,,,,,,,,Make
+,Prison service officer,,,,,,,,,,,,SimilarWeb
+,Probation officer,,,,,,,,,,,,IBISWorld
+,Process operator,,,,,,,,,,,,Crunchbase
+,Product designer,,,,,,,,,,,,CB Insights
+,Clothing designer,,,,,,,,,,,,Statista
+,Production engineer,,,,,,,,,,,,Brandwatch
+,Production manager,,,,,,,,,,,,Google Trends
+,Programmer,,,,,,,,,,,,Talkwalker
+,Property manager,,,,,,,,,,,,Price2Spy
+,Protective service professional,,,,,,,,,,,,Competera
+,Psychologist,,,,,,,,,,,,Helium 10
+,Public relations professional,,,,,,,,,,,,Jungle Scout
+,Public services professional,,,,,,,,,,,,Numerator
+,Publican,,,,,,,,,,,,NielsenIQ
+,Purchasing manager,,,,,,,,,,,,Sprout Social
+,Quality assurance & regulatory professional,,,,,,,,,,,,Meltwater
+,Quality control and planning engineer,,,,,,,,,,,,Hootsuite
+,Quantity surveyor,,,,,,,,,,,,Buffer
+,Quarry worker,,,,,,,,,,,,TikTok
+,Rail builder,,,,,,,,,,,,YouTube
+,Transport maintenance operator,,,,,,,,,,,,Instagram
+,Transport operator,,,,,,,,,,,,Sprinklr
+, Travel assistant,,,,,,,,,,,,ShareASale
+,Receptionist,,,,,,,,,,,,GeniusLink
+,Records clerk,,,,,,,,,,,,Pretty Links
+,Refuse collector,,,,,,,,,,,,Bit.ly
+,Research and development,,,,,,,,,,,,ReferralCandy
+,Day carer,,,,,,,,,,,,Amazon Vine
+,Caterer,,,,,,,,,,,,Drift
+,Retail cashier,,,,,,,,,,,,Gainsight CX
+,Road construction operator,,,,,,,,,,,,ChurnZero
+,Roofer,,,,,,,,,,,,Google Jigsaw API
+, Tester,,,,,,,,,,,,OpenAI API
+,Rubber process operator,,,,,,,,,,,,Hive Moderation
+,Sales account management,,,,,,,,,,,,Azure Content Moderator
+,Business development,,,,,,,,,,,,WordPress
+,Sales administrator,,,,,,,,,,,,Squarespace
+,Sales and retail,,,,,,,,,,,,Wix
+,Sales supervisor,,,,,,,,,,,,Canva
+,Scaffolder,,,,,,,,,,,,Adobe Spark
+,Stager,,,,,,,,,,,,Adobe Photoshop
+,Rigger,,,,,,,,,,,,Adobe Illustrator
+,School secretary,,,,,,,,,,,,Adobe Express
+,Security guard,,,,,,,,,,,,GIMP
+,Careworker,,,,,,,,,,,,Vyond
+,Fire officer,,,,,,,,,,,,Doodly
+,Police officer,,,,,,,,,,,,CapCut
+,Professional,,,,,,,,,,,,Adobe Premiere Rush
+,Sewing machinist,,,,,,,,,,,,Final Cut Pro
+,Sheet metal worker,,,,,,,,,,,,ScreenFlow
+,Shelf filler,,,,,,,,,,,,Camtasia
+,Ship and hovercraft officer,,,,,,,,,,,,OBS Studio
+,Shopkeeper - wholesale and retail ,,,,,,,,,,,,Ffmpeg
+,Skilled trade supervisor,,,,,,,,,,,,Aegisub
+,Electrical trade supervisor,,,,,,,,,,,,Amara
+,Electronic trades supervisor,,,,,,,,,,,,Workday
+,Smiths worker,,,,,,,,,,,,SAP SuccessFactors
+,Forge worker,,,,,,,,,,,,Oracle Taleo
+,Social and humanities scientist,,,,,,,,,,,,BambooHR
+,Social services manager,,,,,,,,,,,,TriNet Zenefits
+,Social worker,,,,,,,,,,,,Paycom
+,Solicitor,,,,,,,,,,,,Paycor
+,Special needs teacher,,,,,,,,,,,,Workforce ADP
+,Speech and language therapist,,,,,,,,,,,,Lattice
+,Sports and leisure supporter,,,,,,,,,,,,15Five
+,Sports coach,,,,,,,,,,,,Qualtrics
+,Sports Instructor,,,,,,,,,,,,Culture AMP
+,Referee,,,,,,,,,,,,Bill4Time
+,Sports player,,,,,,,,,,,,TimeSolv
+,Steel erector,,,,,,,,,,,,Greenhouse
+,Stock controller,,,,,,,,,,,,Lever
+,Tailor,,,,,,,,,,,,iCIMS
+,Dressmaker,,,,,,,,,,,,Jobvite
+,Taxation expert,,,,,,,,,,,,JazzHR
+,Taxi or cab driver,,,,,,,,,,,,Recruitee
+,Teacher,,,,,,,,,,,,Entelo
+,Telecommunications engineer,,,,,,,,,,,,SeekOut
+,Telephone salesperson,,,,,,,,,,,,HireEZ
+,Telephonist,,,,,,,,,,,,Paradox
+,Textile process operative,,,,,,,,,,,,XOR AI
+,Textiles trader,,,,,,,,,,,,HireVue
+,Garments trader,,,,,,,,,,,,Pymetrics
+,Therapist,,,,,,,,,,,,Eightfold AI
+,Tool maker,,,,,,,,,,,,EC2
+,Town planning officer,,,,,,,,,,,,S3
+,Train and tram driver,,,,,,,,,,,,RDS
+,Transport and distribution assistant,,,,,,,,,,,,Lambda
+,Travel agent,,,,,,,,,,,,CloudFormation
+,TV engineer,,,,,,,,,,,,IAM
+,Video engineer,,,,,,,,,,,,BigQuery
+,Audio engineer,,,,,,,,,,,,Azure Virtual Machine
+,Typist,,,,,,,,,,,,Azure Blob Storage
+,"Tyre, exhaust fitter",,,,,,,,,,,,Azure SQL Database
+,Windscreen fitter,,,,,,,,,,,,Azure Entra ID
+,Mortuarist,,,,,,,,,,,,Gorgias
+,Upholsterer,,,,,,,,,,,,Zendesk
+,Van driver,,,,,,,,,,,,LiveChat
+,Car salesperson,,,,,,,,,,,,Tidio
+,Car parts adviser,,,,,,,,,,,,RingCentral
+,Car body repairer,,,,,,,,,,,,8x8
+,Car mechanic,,,,,,,,,,,,Intercom
+,Undertaker,,,,,,,,,,,,Freshdesk
+,Car  cleaner,,,,,,,,,,,,Help Scout
+,Veterinarian,,,,,,,,,,,,TeamViewer
+,Veterinary nurse,,,,,,,,,,,,LogMeIn
+,Vocational trainer,,,,,,,,,,,,AnyDesk
+,Industrial Trainer,,,,,,,,,,,,Bomgar
+,Waiter,,,,,,,,,,,,SolarWinds Service Desk
+,Environmental services,,,,,,,,,,,,ServiceNow ITSM
+,Instructor,,,,,,,,,,,,AWS Cost Explorer
+,Operator,,,,,,,,,,,,Azure Cost Management
+,Weaver,,,,,,,,,,,,New Relic
+,Knitter,,,,,,,,,,,,Datadog
+,Weigher,,,,,,,,,,,,Splunk
+,Grader,,,,,,,,,,,,IBM QRadar
+,Sorter,,,,,,,,,,,,Active Directory (AD)
+,Welder,,,,,,,,,,,,LDAP
+,Welfare and housing associate,,,,,,,,,,,,WSUS
+,Welfare professional,,,,,,,,,,,,SCCM
+,Window cleaner,,,,,,,,,,,,Intune
+,Youth worker,,,,,,,,,,,,Lansweeper
+,Community worker,,,,,,,,,,,,Spiceworks
+,Full Stack Developer,,,,,,,,,,,,GLPI
+,App Developer,,,,,,,,,,,,Open-AudIT
+,Entrepreneur,,,,,,,,,,,,Snow Software
+,Academic,,,,,,,,,,,,Azure Sentinel
+,Sales Representative,,,,,,,,,,,,OWASP ZAP
+,Healthcare Worker,,,,,,,,,,,,Burp Suite
+,Engineer,,,,,,,,,,,,CrowdStrike Falcon
+,Scientist,,,,,,,,,,,,Malwarebytes
+,Legal Professional,,,,,,,,,,,,Norton Endpoint Protection
+,Financial Analyst,,,,,,,,,,,,Bitdefender GravityZone
+,Writer,,,,,,,,,,,,Microsoft Defender
+,Content Creator,,,,,,,,,,,,Kaspersky
+,Real Estate Agent,,,,,,,,,,,,Nagios
+,Tradesperson,,,,,,,,,,,,PRTG Network Monitor
+,Non Profit,,,,,,,,,,,,Wireshark
+,Volunteer,,,,,,,,,,,,TCPDump
+,Financial Advisor,,,,,,,,,,,,Zabbix
+,Shop Worker,,,,,,,,,,,,ManageEngine OpManager
+,,,,,,,,,,,,,Nextiva
+,,,,,,,,,,,,,Aircall
+,,,,,,,,,,,,,Grasshopper
+,,,,,,,,,,,,,Twilio
+,,,,,,,,,,,,,Vonage
+,,,,,,,,,,,,,Five9
+,,,,,,,,,,,,,Genesys Cloud
+,,,,,,,,,,,,,HWiNFO
+,,,,,,,,,,,,,CPU-Z
+,,,,,,,,,,,,,GPU-Z
+,,,,,,,,,,,,,CrystalDiskInfo
+,,,,,,,,,,,,,GSmartControl
+,,,,,,,,,,,,,MemTest86
+,,,,,,,,,,,,,Chatfuel
+,,,,,,,,,,,,,ManyChat
+,,,,,,,,,,,,,Dialogflow
+,,,,,,,,,,,,,IBM Watson Assistant
+,,,,,,,,,,,,,Express Scribe
+,,,,,,,,,,,,,oTranscribe
+,,,,,,,,,,,,,InqScribe
+,,,,,,,,,,,,,Trint
+,,,,,,,,,,,,,Sonix
+,,,,,,,,,,,,,Descript
+,,,,,,,,,,,,,Tesseract OCR
+,,,,,,,,,,,,,EasyOCR
+,,,,,,,,,,,,,PaddleOCR
+,,,,,,,,,,,,,Taggun
+,,,,,,,,,,,,,Imagga
+,,,,,,,,,,,,,BuiltWith
+,,,,,,,,,,,,,Lighthouse
+,,,,,,,,,,,,,Gtmetrix
+,,,,,,,,,,,,,Pingdom
+,,,,,,,,,,,,,WebPageTest
+,,,,,,,,,,,,,Adobe Bridge
+,,,,,,,,,,,,,Lightroom
+,,,,,,,,,,,,,ExifTool
+,,,,,,,,,,,,,DigiKam
+,,,,,,,,,,,,,Planoly
+,,,,,,,,,,,,,Commsor
+,,,,,,,,,,,,,Orbit
+,,,,,,,,,,,,,Modmail
+,,,,,,,,,,,,,AutoMod
+,,,,,,,,,,,,,CrowdTangle
+,,,,,,,,,,,,,Two Hat Community Sift
+,,,,,,,,,,,,,Spectrum Labs
+,,,,,,,,,,,,,ActiveFence
+,,,,,,,,,,,,,Varonis
+,,,,,,,,,,,,,Maltego
+,,,,,,,,,,,,,Shodan
+,,,,,,,,,,,,,Google Dorking
+,,,,,,,,,,,,,WHOIS Lookup
+,,,,,,,,,,,,,HashiCorp Vault
+,,,,,,,,,,,,,BeautifulSoup
+,,,,,,,,,,,,,Scrapy
+,,,,,,,,,,,,,Octoparse
+,,,,,,,,,,,,,ParseHub
+,,,,,,,,,,,,,Diffbot
+,,,,,,,,,,,,,Selenium
+,,,,,,,,,,,,,Playwright
+,,,,,,,,,,,,,cURL
+,,,,,,,,,,,,,RapidAPI
+,,,,,,,,,,,,,AWS Textract
+,,,,,,,,,,,,,pdfminer
+,,,,,,,,,,,,,Apache Hadoop
+,,,,,,,,,,,,,Apache Spark
+,,,,,,,,,,,,,Apache Kafka
+,,,,,,,,,,,,,PySpark
+,,,,,,,,,,,,,Apache Airflow
+,,,,,,,,,,,,,Apache NiFi
+,,,,,,,,,,,,,Talend
+,,,,,,,,,,,,,Airflow
+,,,,,,,,,,,,,Informatica PowerCenter
+,,,,,,,,,,,,,dbt
+,,,,,,,,,,,,,Microsoft SSIS
+,,,,,,,,,,,,,AWS Glue
+,,,,,,,,,,,,,Azure Data Factory
+,,,,,,,,,,,,,Databricks
+,,,,,,,,,,,,,Fivetran
+,,,,,,,,,,,,,Microsoft Power Query
+,,,,,,,,,,,,,Apache Hudi
+,,,,,,,,,,,,,Iceberg
+,,,,,,,,,,,,,Delta Lake
+,,,,,,,,,,,,,Luigi
+,,,,,,,,,,,,,Dagster
+,,,,,,,,,,,,,Prefect
+,,,,,,,,,,,,,Apache Flink
+,,,,,,,,,,,,,Apache Pulsar
+,,,,,,,,,,,,,Google Dataflow
+,,,,,,,,,,,,,Dask
+,,,,,,,,,,,,,AWS Kinesis
+,,,,,,,,,,,,,SQLite
+,,,,,,,,,,,,,MariaDB
+,,,,,,,,,,,,,ClickHouse
+,,,,,,,,,,,,,Presto
+,,,,,,,,,,,,,Trino
+,,,,,,,,,,,,,Apache Drill
+,,,,,,,,,,,,,Amazon Redshift
+,,,,,,,,,,,,,Snowflake
+,,,,,,,,,,,,,Apache Cassandra
+,,,,,,,,,,,,,Apache Atlas
+,,,,,,,,,,,,,LOD (Linked Open Data)
+,,,,,,,,,,,,,Apache Jena
+,,,,,,,,,,,,,AllegroGraph
+,,,,,,,,,,,,,Stardog
+,,,,,,,,,,,,,Wikidata Query Service
+,,,,,,,,,,,,,Fiix CMMS
+,,,,,,,,,,,,,UpKeep
+,,,,,,,,,,,,,Hippo CMMS
+,,,,,,,,,,,,,eMaint CMMS
+,,,,,,,,,,,,,ServiceTitan
+,,,,,,,,,,,,,Jobber
+,,,,,,,,,,,,,WorkWave
+,,,,,,,,,,,,,ServiceMax
+,,,,,,,,,,,,,ServiceNow
+,,,,,,,,,,,,,IBM Maximo
+,,,,,,,,,,,,,Uptake
+,,,,,,,,,,,,,Sensye IoT Sensors
+,,,,,,,,,,,,,Fluke
+,,,,,,,,,,,,,FieldEdge
+,,,,,,,,,,,,,SimPRO
+,,,,,,,,,,,,,Housecall Pro
+,,,,,,,,,,,,,XOi Technologies
+,,,,,,,,,,,,,MeasureQuick
+,,,,,,,,,,,,,PartsTech
+,,,,,,,,,,,,,Fishbowl Inventory
+,,,,,,,,,,,,,Asset Panda
+,,,,,,,,,,,,,Epicor Prophet 21
+,,,,,,,,,,,,,Tavant Warranty
+,,,,,,,,,,,,,Fleet Complete
+,,,,,,,,,,,,,Geotab
+,,,,,,,,,,,,,Caterpillar Vision Link
+,,,,,,,,,,,,,Tenna
+,,,,,,,,,,,,,Buildium
+,,,,,,,,,,,,,Yardi
+,,,,,,,,,,,,,Corrigo
+,,,,,,,,,,,,,Azure DevOps
+,,,,,,,,,,,,,GitHub
+,,,,,,,,,,,,,GitLab
+,,,,,,,,,,,,,Bitbucket
+,,,,,,,,,,,,,Jenkins
+,,,,,,,,,,,,,CircleCI
+,,,,,,,,,,,,,Travis CI
+,,,,,,,,,,,,,Docker
+,,,,,,,,,,,,,Kubernetes
+,,,,,,,,,,,,,MySQL
+,,,,,,,,,,,,,PostgreSQL
+,,,,,,,,,,,,,MongoDB
+,,,,,,,,,,,,,Blue Prism
+,,,,,,,,,,,,,UiPath
+,,,,,,,,,,,,,Postman
+,,,,,,,,,,,,,SoapUI
+,,,,,,,,,,,,,AppDynamics
+,,,,,,,,,,,,,Java
+,,,,,,,,,,,,,Go
+,,,,,,,,,,,,,JSON-LD
+,,,,,,,,,,,,,XML
+,,,,,,,,,,,,,XSLT
+,,,,,,,,,,,,,YAML
+,,,,,,,,,,,,,Clio
+,,,,,,,,,,,,,MyCase
+,,,,,,,,,,,,,PracticePanther
+,,,,,,,,,,,,,Rocket Matter
+,,,,,,,,,,,,,Lawmatics
+,,,,,,,,,,,,,Westlaw
+,,,,,,,,,,,,,LexisNexis
+,,,,,,,,,,,,,Fastcase
+,,,,,,,,,,,,,Casetext
+,,,,,,,,,,,,,PACER
+,,,,,,,,,,,,,FTR Gold
+,,,,,,,,,,,,,CourtSmart
+,,,,,,,,,,,,,Nuance Dragon Legal
+,,,,,,,,,,,,,OneTrust
+,,,,,,,,,,,,,TrustArc
+,,,,,,,,,,,,,VeraSafe
+,,,,,,,,,,,,,IBM Guardium
+,,,,,,,,,,,,,BigID
+,,,,,,,,,,,,,LogicGate
+,,,,,,,,,,,,,ServiceNow GRC
+,,,,,,,,,,,,,Aptien
+,,,,,,,,,,,,,SiteDocs
+,,,,,,,,,,,,,FallSafety App
+,,,,,,,,,,,,,OSHA 360 Training
+,,,,,,,,,,,,,SafetyCulture
+,,,,,,,,,,,,,Cority EHS
+,,,,,,,,,,,,,iAuditor
+,,,,,,,,,,,,,Vector EHS
+,,,,,,,,,,,,,ComplianceQuest
+,,,,,,,,,,,,,EPA SNAP
+,,,,,,,,,,,,,CARB Emission
+,,,,,,,,,,,,,ASE Testing
+,,,,,,,,,,,,,Dealertrack Compliance
+,,,,,,,,,,,,,Shopify
+,,,,,,,,,,,,,WooCommerce
+,,,,,,,,,,,,,Magento
+,,,,,,,,,,,,,BigCommerce
+,,,,,,,,,,,,,TradeGecko
+,,,,,,,,,,,,,Skubana
+,,,,,,,,,,,,,Linnworks
+,,,,,,,,,,,,,Katana MRP
+,,,,,,,,,,,,,Klarna
+,,,,,,,,,,,,,Afterpay
+,,,,,,,,,,,,,Epic Systems
+,,,,,,,,,,,,,Cerner
+,,,,,,,,,,,,,Athenahealth
+,,,,,,,,,,,,,Kareo
+,,,,,,,,,,,,,AdvancedMD
+,,,,,,,,,,,,,DrChrono
+,,,,,,,,,,,,,PracticeSuite
+,,,,,,,,,,,,,NueMD
+,,,,,,,,,,,,,eClinicalWorks
+,,,,,,,,,,,,,Oracle Health
+,,,,,,,,,,,,,Meditech
+,,,,,,,,,,,,,Zocdoc
+,,,,,,,,,,,,,Solutionreach
+,,,,,,,,,,,,,Doxy.me
+,,,,,,,,,,,,,Updox
+,,,,,,,,,,,,,Spruce Health
+,,,,,,,,,,,,,Teladoc Health
+,,,,,,,,,,,,,Vsee
+,,,,,,,,,,,,,Availity
+,,,,,,,,,,,,,Waystar
+,,,,,,,,,,,,,MDCloud
+,,,,,,,,,,,,,Office Ally
+,,,,,,,,,,,,,Dragon Medical One
+,,,,,,,,,,,,,ScribeAmerica
+,,,,,,,,,,,,,iScribeHealth
+,,,,,,,,,,,,,Otter.ai
+,,,,,,,,,,,,,Rev.com
+,,,,,,,,,,,,,UpToDate
+,,,,,,,,,,,,,Medscape
+,,,,,,,,,,,,,PubMed
+,,,,,,,,,,,,,WebMD Pro
+,,,,,,,,,,,,,Epocrates
+,,,,,,,,,,,,,Google Flights
+,,,,,,,,,,,,,Skyscanner
+,,,,,,,,,,,,,Kayak
+,,,,,,,,,,,,,Oracle NetSuite
+,,,,,,,,,,,,,SAP ERP
+,,,,,,,,,,,,,Tally ERP 9
+,,,,,,,,,,,,,Capterra
+,,,,,,,,,,,,,G2
+,,,,,,,,,,,,,GetApp
+,,,,,,,,,,,,,SaaSHub
+,,,,,,,,,,,,,Keepa
+,,,,,,,,,,,,,CamelCamelCamel
+,,,,,,,,,,,,,Trustpilot
+,,,,,,,,,,,,,Fakespot
+,,,,,,,,,,,,,ReviewMeta
+,,,,,,,,,,,,,Product Hunt
+,,,,,,,,,,,,,ProdPad
+,,,,,,,,,,,,,FeatureUpvote
+,,,,,,,,,,,,,Procore
+,,,,,,,,,,,,,Autodesk BIM 360
+,,,,,,,,,,,,,PlanGrid
+,,,,,,,,,,,,,Fieldwire
+,,,,,,,,,,,,,Buildertrend
+,,,,,,,,,,,,,Primavera P6
+,,,,,,,,,,,,,Bluebeam Revu
+,,,,,,,,,,,,,ProEst
+,,,,,,,,,,,,,STACK
+,,,,,,,,,,,,,Sage 300 Construction and Real Estate
+,,,,,,,,,,,,,eSUB
+,,,,,,,,,,,,,HeavyJob
+,,,,,,,,,,,,,CMiC
+,,,,,,,,,,,,,Raken
+,,,,,,,,,,,,,AutoCAD
+,,,,,,,,,,,,,Revit
+,,,,,,,,,,,,,ArchiCAD
+,,,,,,,,,,,,,SketchUp
+,,,,,,,,,,,,,Vectorworks Architect
+,,,,,,,,,,,,,MicroStation
+,,,,,,,,,,,,,Tekla Structures
+,,,,,,,,,,,,,Trimble SysQue
+,,,,,,,,,,,,,SAP2000
+,,,,,,,,,,,,,ETABS
+,,,,,,,,,,,,,STAAD.Pro
+,,,,,,,,,,,,,AutoTURN
+,,,,,,,,,,,,,HEC-RAS
+,,,,,,,,,,,,,ENVI
+,,,,,,,,,,,,,QGIS
+,,,,,,,,,,,,,ANSYS
+,,,,,,,,,,,,,SolidWorks Simulation
+,,,,,,,,,,,,,Autodesk CFD
+,,,,,,,,,,,,,Abaqus
+,,,,,,,,,,,,,COMSOL
+,,,,,,,,,,,,,Dialux
+,,,,,,,,,,,,,AGi32
+,,,,,,,,,,,,,DesignBuilder
+,,,,,,,,,,,,,EnergyPlus
+,,,,,,,,,,,,,IES-VE
+,,,,,,,,,,,,,OpenStudio
+,,,,,,,,,,,,,Lumion
+,,,,,,,,,,,,,V-Ray
+,,,,,,,,,,,,,Enscape
+,,,,,,,,,,,,,Twinmotion
+,,,,,,,,,,,,,Unreal Engine 5
+,,,,,,,,,,,,,Honeywell
+,,,,,,,,,,,,,Logiwa
+,,,,,,,,,,,,,ShipHero
+,,,,,,,,,,,,,Kinaxis RapidResponse
+,,,,,,,,,,,,,Llamasoft Supply Chain Guru
+,,,,,,,,,,,,,E2open
+,,,,,,,,,,,,,CargoWise One
+,,,,,,,,,,,,,Descartes
+,,,,,,,,,,,,,MercuryGate
+,,,,,,,,,,,,,Freightview
+,,,,,,,,,,,,,Freightos
+,,,,,,,,,,,,,Resilinc
+,,,,,,,,,,,,,EcoVadis
+,,,,,,,,,,,,,Zotero
+,,,,,,,,,,,,,Mendeley
+,,,,,,,,,,,,,EndNote
+,,,,,,,,,,,,,JSTOR
+,,,,,,,,,,,,,IEEE Xplore
+,,,,,,,,,,,,,Obsidian
+,,,,,,,,,,,,,Roam Research
+,,,,,,,,,,,,,Wayback Machine
+,,,,,,,,,,,,,FOIA.gov
+,,,,,,,,,,,,,Hemingway Editor
+,,,,,,,,,,,,,ProWriting Aid
+,,,,,,,,,,,,,Adobe Captivate
+,,,,,,,,,,,,,Moodle
+,,,,,,,,,,,,,Storyline
+,,,,,,,,,,,,,Rise
+,,,,,,,,,,,,,Lectora
+,,,,,,,,,,,,,iSpring Suite
+,,,,,,,,,,,,,TalentLMS
+,,,,,,,,,,,,,SAP Litmos
+,,,,,,,,,,,,,Docebo
+,,,,,,,,,,,,,360Learning
+,,,,,,,,,,,,,Cornerstone OnDemand
+,,,,,,,,,,,,,Blackboard Learn
+,,,,,,,,,,,,,Canvas
+,,,,,,,,,,,,,D2L Brightspace
+,,,,,,,,,,,,,Google Classroom
+,,,,,,,,,,,,,Schoology
+,,,,,,,,,,,,,Kudos
+,,,,,,,,,,,,,XP Systems
+,,,,,,,,,,,,,Bunchball
+,,,,,,,,,,,,,Gametize
+,,,,,,,,,,,,,Axonify
+,,,,,,,,,,,,,Kahoot!
+,,,,,,,,,,,,,Quizizz
+,,,,,,,,,,,,,H5P
+,,,,,,,,,,,,,Thinkific
+,,,,,,,,,,,,,Teachable
+,,,,,,,,,,,,,Kajabi
+,,,,,,,,,,,,,Pluralsight
+,,,,,,,,,,,,,Skillshare
+,,,,,,,,,,,,,ClassMarker
+,,,,,,,,,,,,,ExamSoft
+,,,,,,,,,,,,,ProProfs Training Maker
+,,,,,,,,,,,,,Turnitin
+,,,,,,,,,,,,,Nearpod
+,,,,,,,,,,,,,EdPuzzle
+,,,,,,,,,,,,,Genially
+,,,,,,,,,,,,,Pear Deck
+,,,,,,,,,,,,,Socrative
+,,,,,,,,,,,,,Flipgrid
+,,,,,,,,,,,,,Padlet
+,,,,,,,,,,,,,PBIS Rewards
+,,,,,,,,,,,,,Securly
+,,,,,,,,,,,,,ParentSquare
+,,,,,,,,,,,,,SchoolMessenger
+,,,,,,,,,,,,,Ellucian Banner
+,,,,,,,,,,,,,PeopleSoft Campus Solutions
+,,,,,,,,,,,,,Jenzabar One
+,,,,,,,,,,,,,Anthology Student
+,,,,,,,,,,,,,FACTS SIS
+,,,,,,,,,,,,,iSAMS
+,,,,,,,,,,,,,Skyward SIS
+,,,,,,,,,,,,,Infinite Campus
+,,,,,,,,,,,,,PowerSchool
+,,,,,,,,,,,,,Google Scholar
+,,,,,,,,,,,,,ORCID
+,,,,,,,,,,,,,Ex Libris Alma & Primo
+,,,,,,,,,,,,,Koha
+,,,,,,,,,,,,,Dspace
+,,,,,,,,,,,,,WorldCat
+,,,,,,,,,,,,,EBSCO
+,,,,,,,,,,,,,Procare Solutions
+,,,,,,,,,,,,,Brightwheel
+,,,,,,,,,,,,,HiMama
+,,,,,,,,,,,,,Kinderlime
+,,,,,,,,,,,,,Kangarootime
+,,,,,,,,,,,,,Frog Street
+,,,,,,,,,,,,,Planbook
+,,,,,,,,,,,,,Seesaw
+,,,,,,,,,,,,,Educa
+,,,,,,,,,,,,,Storypark
+,,,,,,,,,,,,,TeachKloud
+,,,,,,,,,,,,,ClassDojo
+,,,,,,,,,,,,,Remind
+,,,,,,,,,,,,,Tadpoles
+,,,,,,,,,,,,,Bloomz
+,,,,,,,,,,,,,Kaymbu
+,,,,,,,,,,,,,KidCheck
+,,,,,,,,,,,,,Famly
+,,,,,,,,,,,,,MomentPath
+,,,,,,,,,,,,,BehaviorSnap
+,,,,,,,,,,,,,NurtureSmart
+,,,,,,,,,,,,,ASQ-3
+,,,,,,,,,,,,,COR Advantage
+,,,,,,,,,,,,,Smartcare
+,,,,,,,,,,,,,MealTracker
+,,,,,,,,,,,,,Osmo
+,,,,,,,,,,,,,Tiggly
+,,,,,,,,,,,,,ABCmouse
+,,,,,,,,,,,,,Epic!
+,,,,,,,,,,,,,PBS
+,,,,,,,,,,,,,BrainPOP
+,,,,,,,,,,,,,IXL Learning
+,,,,,,,,,,,,,Newsela
+,,,,,,,,,,,,,Britannica School
+,,,,,,,,,,,,,ModMath
+,,,,,,,,,,,,,Scratch
+,,,,,,,,,,,,,Tynker
+,,,,,,,,,,,,,Makey Makey
+,,,,,,,,,,,,,Sielox Class
+,,,,,,,,,,,,,SchoolPass
+,,,,,,,,,,,,,LobbyGuard
+,,,,,,,,,,,,,Raptor Visitor Management
+,,,,,,,,,,,,,Safe Sleep
+,,,,,,,,,,,,,CrisisGo
+,,,,,,,,,,,,,Red Cross
+,,,,,,,,,,,,,AHA
+,,,,,,,,,,,,,ChildCare Aware
+,,,,,,,,,,,,,Bevy
+,,,,,,,,,,,,,Meetup
+,,,,,,,,,,,,,Aventri
+,,,,,,,,,,,,,Eventix
+,,,,,,,,,,,,,Gametime
+,,,,,,,,,,,,,Lyte
+,,,,,,,,,,,,,iAudition
+,,,,,,,,,,,,,VoiceZam
+,,,,,,,,,,,,,Acapela Group
+,,,,,,,,,,,,,Vocalware
+,,,,,,,,,,,,,Répétito
+,,,,,,,,,,,,,Final Draft
+,,,,,,,,,,,,,Celtx
+,,,,,,,,,,,,,Scriptation
+,,,,,,,,,,,,,Studiobinder
+,,,,,,,,,,,,,Rehearsal Pro
+,,,,,,,,,,,,,Cold Read
+,,,,,,,,,,,,,Stage Write
+,,,,,,,,,,,,,iPerform
+,,,,,,,,,,,,,WriterDuet
+,,,,,,,,,,,,,Open Mic Finder
+,,,,,,,,,,,,,CuePrompter
+,,,,,,,,,,,,,iForce
+,,,,,,,,,,,,,TeleFoto
+,,,,,,,,,,,,,Adobe Audition
+,,,,,,,,,,,,,Audacity
+,,,,,,,,,,,,,Ableton Live
+,,,,,,,,,,,,,Serato DJ Pro
+,,,,,,,,,,,,,Traktor Pro
+,,,,,,,,,,,,,Loopback
+,,,,,,,,,,,,,VoiceMeeter
+,,,,,,,,,,,,,ShurePlus MOTIV
+,,,,,,,,,,,,,GarageBand
+,,,,,,,,,,,,,FL Studio
+,,,,,,,,,,,,,Logic Pro X
+,,,,,,,,,,,,,Pro Tools
+,,,,,,,,,,,,,Antares Auto-Tune
+,,,,,,,,,,,,,Melodyne
+,,,,,,,,,,,,,iZotope Nectar
+,,,,,,,,,,,,,Waves Vocal
+,,,,,,,,,,,,,Native Instruments
+,,,,,,,,,,,,,Spectrasonics
+,,,,,,,,,,,,,Toontrack
+,,,,,,,,,,,,,EastWest Sounds
+,,,,,,,,,,,,,Arturia
+,,,,,,,,,,,,,Vox Tools
+,,,,,,,,,,,,,Vanido
+,,,,,,,,,,,,,Singing Carrots
+,,,,,,,,,,,,,Riyaz
+,,,,,,,,,,,,,Erol Singer's Studio
+,,,,,,,,,,,,,KaraFun
+,,,,,,,,,,,,,SingSnap
+,,,,,,,,,,,,,Singa
+,,,,,,,,,,,,,MocapX
+,,,,,,,,,,,,,Xsens MVN Animate
+,,,,,,,,,,,,,Qlab
+,,,,,,,,,,,,,Show Cue Systems
+,,,,,,,,,,,,,StageCaller
+,,,,,,,,,,,,,StageTimer.io
+,,,,,,,,,,,,,CueCards
+,,,,,,,,,,,,,PromptSmart Pro
+,,,,,,,,,,,,,MadMapper
+,,,,,,,,,,,,,Resolume Arena
+,,,,,,,,,,,,,TouchDesigner
+,,,,,,,,,,,,,Elgato Stream Deck
+,,,,,,,,,,,,,vMix
+,,,,,,,,,,,,,STEEZY Studio
+,,,,,,,,,,,,,Tempo SlowMo
+,,,,,,,,,,,,,Smule
+,,,,,,,,,,,,,OpenBet
+,,,,,,,,,,,,,Kambi Sportsbook
+,,,,,,,,,,,,,SBTech
+,,,,,,,,,,,,,BetConstruct
+,,,,,,,,,,,,,BtoBet
+,,,,,,,,,,,,,IGT
+,,,,,,,,,,,,,Aristocrat Oasis
+,,,,,,,,,,,,,Konami SYNKROS
+,,,,,,,,,,,,,SoftSwiss Casino
+,,,,,,,,,,,,,Playtech Casino
+,,,,,,,,,,,,,Sportradar
+,,,,,,,,,,,,,Optimove
+,,,,,,,,,,,,,BetBuddy
+,,,,,,,,,,,,,H2 Gambling Capital
+,,,,,,,,,,,,,Catapult
+,,,,,,,,,,,,,Hudl
+,,,,,,,,,,,,,Zebra MotionWorks
+,,,,,,,,,,,,,Kinexon
+,,,,,,,,,,,,,SportVU
+,,,,,,,,,,,,,Tonal
+,,,,,,,,,,,,,NormaTec
+,,,,,,,,,,,,,Vert
+,,,,,,,,,,,,,Polar watch
+,,,,,,,,,,,,,WHOOP
+,,,,,,,,,,,,,Sibelius
+,,,,,,,,,,,,,Finale
+,,,,,,,,,,,,,MuseScore
+,,,,,,,,,,,,,Dorico
+,,,,,,,,,,,,,RecTrac
+,,,,,,,,,,,,,PerfectMind
+,,,,,,,,,,,,,ActiveNet
+,,,,,,,,,,,,,DASH Platform
+,,,,,,,,,,,,,EZFacility
+,,,,,,,,,,,,,GeoComply
+,,,,,,,,,,,,,SEON Fraud
+,,,,,,,,,,,,,GBG ID3 Global
+,,,,,,,,,,,,,iovation
+,,,,,,,,,,,,,Wirecast
+,,,,,,,,,,,,,StreamYard
+,,,,,,,,,,,,,Restream
+,,,,,,,,,,,,,Adobe Premiere Pro
+,,,,,,,,,,,,,Teleprompter Pro
+,,,,,,,,,,,,,Scripter
+,,,,,,,,,,,,,Prezi
+,,,,,,,,,,,,,Visme
+,,,,,,,,,,,,,Keynote
+,,,,,,,,,,,,,Slido
+,,,,,,,,,,,,,Mentimeter
+,,,,,,,,,,,,,Poll Everywhere
+,,,,,,,,,,,,,Crowdcast
+,,,,,,,,,,,,,Airmeet
+,,,,,,,,,,,,,Eventbrite
+,,,,,,,,,,,,,CattleMax
+,,,,,,,,,,,,,AgriWebb
+,,,,,,,,,,,,,Farmbrite
+,,,,,,,,,,,,,PastureMap
+,,,,,,,,,,,,,Breedr
+,,,,,,,,,,,,,CowManager
+,,,,,,,,,,,,,Allflex
+,,,,,,,,,,,,,SmartBow
+,,,,,,,,,,,,,Lely Vector
+,,,,,,,,,,,,,DeLaval
+,,,,,,,,,,,,,GEA
+,,,,,,,,,,,,,BouMatic
+,,,,,,,,,,,,,DairyOne
+,,,,,,,,,,,,,Micro Technologies
+,,,,,,,,,,,,,Zoetis
+,,,,,,,,,,,,,Neogen
+,,,,,,,,,,,,,Genus ABS
+,,,,,,,,,,,,,MVE
+,,,,,,,,,,,,,VetLink
+,,,,,,,,,,,,,Herdwatch
+,,,,,,,,,,,,,GlobalVetLink
+,,,,,,,,,,,,,NRC (National Research Council)
+,,,,,,,,,,,,,FAO (Food and Agriculture Organization)
+,,,,,,,,,,,,,FarmLogs
+,,,,,,,,,,,,,Agrible
+,,,,,,,,,,,,,DTN
+,,,,,,,,,,,,,Arable Mark
+,,,,,,,,,,,,,Trimble Ag
+,,,,,,,,,,,,,AquaSpy
+,,,,,,,,,,,,,AgriTech Analytics
+,,,,,,,,,,,,,Climate FieldView
+,,,,,,,,,,,,,John Deere
+,,,,,,,,,,,,,Teralytic
+,,,,,,,,,,,,,CropX
+,,,,,,,,,,,,,Sentera
+,,,,,,,,,,,,,Netafim
+,,,,,,,,,,,,,Lindsay Zimmatic
+,,,,,,,,,,,,,Jain Logic
+,,,,,,,,,,,,,Pix4Dfields
+,,,,,,,,,,,,,AgEagle
+,,,,,,,,,,,,,Granular
+,,,,,,,,,,,,,AgFiniti
+,,,,,,,,,,,,,Agrivi
+,,,,,,,,,,,,,Raven Slingshot
+,,,,,,,,,,,,,xarvio
+,,,,,,,,,,,,,Syngenta AgriEdge
+,,,,,,,,,,,,,iMETOS
+,,,,,,,,,,,,,IBM Food Trust
+,,,,,,,,,,,,,AgLeader
+,,,,,,,,,,,,,AgSquared
+,,,,,,,,,,,,,Blue River Technology
+,,,,,,,,,,,,,AgriSync
+,,,,,,,,,,,,,Raven Autonomy
+,,,,,,,,,,,,,FarmHQ
+,,,,,,,,,,,,,Fendt VarioGuide
+,,,,,,,,,,,,,FarmSense
+,,,,,,,,,,,,,Aquanetix
+,,,,,,,,,,,,,AKVAconnect
+,,,,,,,,,,,,,Maritech Aqua
+,,,,,,,,,,,,,XpertSea
+,,,,,,,,,,,,,VAKI
+,,,,,,,,,,,,,PDS
+,,,,,,,,,,,,,VMS
+,,,,,,,,,,,,,Fujitsu FishCount
+,,,,,,,,,,,,,BlueTraker VMS
+,,,,,,,,,,,,,FishTrax
+,,,,,,,,,,,,,ArcGIS Marine
+,,,,,,,,,,,,,Seabed 2030
+,,,,,,,,,,,,,AtlantOS
+,,,,,,,,,,,,,FADs
+,,,,,,,,,,,,,NOAA
+,,,,,,,,,,,,,Trimble Forestry
+,,,,,,,,,,,,,Silvacom FMS
+,,,,,,,,,,,,,Remsoft
+,,,,,,,,,,,,,TRESTIMA
+,,,,,,,,,,,,,LOGR
+,,,,,,,,,,,,,RIEGL
+,,,,,,,,,,,,,Leica
+,,,,,,,,,,,,,TreeMetrics
+,,,,,,,,,,,,,ArborMetrics
+,,,,,,,,,,,,,LogMax Heads
+,,,,,,,,,,,,,Ponsse Harvesters & Forwarders
+,,,,,,,,,,,,,Tigercat Harvesting Machines
+,,,,,,,,,,,,,FSC (Forest Stewardship Council)
+,,,,,,,,,,,,,i-Tree Eco
+,,,,,,,,,,,,,Landsat
+,,,,,,,,,,,,,MODIS
+,,,,,,,,,,,,,TunaScope
+,,,,,,,,,,,,,Envisible Wholechain
+,,,,,,,,,,,,,TreeSnap
+,,,,,,,,,,,,,LIMS
+,,,,,,,,,,,,,WoodXtra
+,,,,,,,,,,,,,FibreTrace
+,,,,,,,,,,,,,MiCROTEC Logeye
+,,,,,,,,,,,,,Grower's Choice
+,,,,,,,,,,,,,Tropica Plant DB
+,,,,,,,,,,,,,SeedBank Pro
+,,,,,,,,,,,,,SmartPropagator
+,,,,,,,,,,,,,Stanhay
+,,,,,,,,,,,,,Jang JP
+,,,,,,,,,,,,,Bühler
+,,,,,,,,,,,,,Centor
+,,,,,,,,,,,,,ESCO
+,,,,,,,,,,,,,MS
+,,,,,,,,,,,,,Thermo Fisher
+,,,,,,,,,,,,,Tuttnauer
+,,,,,,,,,,,,,Yamato
+,,,,,,,,,,,,,Conviron
+,,,,,,,,,,,,,Percival
+,,,,,,,,,,,,,PGR
+,,,,,,,,,,,,,EZ-Clone
+,,,,,,,,,,,,,Botanicare
+,,,,,,,,,,,,,AeroGarden
+,,,,,,,,,,,,,IBA
+,,,,,,,,,,,,,NAA
+,,,,,,,,,,,,,Dip'N Grow
+,,,,,,,,,,,,,Clonex
+,,,,,,,,,,,,,TurboKlone
+,,,,,,,,,,,,,Mitchell 1 ProDemand
+,,,,,,,,,,,,,ALLDATA Repair
+,,,,,,,,,,,,,Identifix Direct-Hit
+,,,,,,,,,,,,,Autodata
+,,,,,,,,,,,,,ShopKey Pro
+,,,,,,,,,,,,,Autel MaxiSys Elite
+,,,,,,,,,,,,,Bosch KTS 590
+,,,,,,,,,,,,,Launch X431 V+
+,,,,,,,,,,,,,BlueDriver OBD2
+,,,,,,,,,,,,,Snap-on Solus Edge
+,,,,,,,,,,,,,Tesla Toolbox
+,,,,,,,,,,,,,Autel MaxiCharger EV Diagnostic Kit
+,,,,,,,,,,,,,Tekmetric
+,,,,,,,,,,,,,Shopmonkey
+,,,,,,,,,,,,,ARI (Auto Repair Invoicing)
+,,,,,,,,,,,,,RepairShopr
+,,,,,,,,,,,,,RO Writer
+,,,,,,,,,,,,,CCC ONE
+,,,,,,,,,,,,,Audatex
+,,,,,,,,,,,,,Mitchell Cloud Estimating
+,,,,,,,,,,,,,Axalta ColorNet
+,,,,,,,,,,,,,3M PPS Paint Preparation
+,,,,,,,,,,,,,ECUtek ProECU
+,,,,,,,,,,,,,HP Tuners VCM Suite
+,,,,,,,,,,,,,Cobb Accessport
+,,,,,,,,,,,,,Alientech KESSv3
+,,,,,,,,,,,,,Dynojet Power Vision
+,,,,,,,,,,,,,BOSCH BAT 131 Battery Tester
+,,,,,,,,,,,,,OTC Encore
+,,,,,,,,,,,,,Fluke 1587 FC
+,,,,,,,,,,,,,Dossier Systems
+,,,,,,,,,,,,,AUTOsist
+,,,,,,,,,,,,,Fleetio
+,,,,,,,,,,,,,Epicor Parts Network
+,,,,,,,,,,,,,Shop-Ware
+,,,,,,,,,,,,,AutoFluent
+,,,,,,,,,,,,,GaragePlug
+,,,,,,,,,,,,,Hansen CIS
+,,,,,,,,,,,,,PowerClerk
+,,,,,,,,,,,,,Bentley Systems

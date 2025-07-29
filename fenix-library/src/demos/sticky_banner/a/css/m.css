@@ -1,0 +1,57 @@
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+  touch-action: manipulation;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#stickybanner {
+  background-color: #E6E6E6;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+#stickybanner .box-content {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#stickybanner .box-content img {
+  width: 100%;
+}
+
+#stickybanner .box-content p {
+  color: #ffffff;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0;
+  text-align: center;
+}
+
+#stickybanner #close {
+  background: url(../img/cross.svg) no-repeat;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 20px;
+}

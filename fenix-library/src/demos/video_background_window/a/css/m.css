@@ -1,0 +1,207 @@
+@font-face {font-family: Futura-Medium; src: url(../font/Futura-Medium-01.ttf);}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/*#video{*/
+    /*transition: transform 0.1s linear;*/
+    /*-webkit-transition: transform 0.1s linear;*/
+    /*-moz-transition: transform 0.1s linear;*/
+/*}*/
+
+#banner video {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    object-fit: cover;
+}
+
+.text2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+    /*position: absolute;*/
+    z-index: 500;
+    background: url(../img/2_TEXT.png) no-repeat;
+    background-size: 100% auto;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s ease-out;
+}
+
+
+.text3{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    /*position: absolute;*/
+    z-index: 500;
+    background: url(../img/3_TEXT.png) no-repeat;
+    background-size: 100% auto;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s ease-out;
+}
+
+
+
+.text4{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    /*position: absolute;*/
+    z-index: 500;
+    background: url(../img/4_TEXT.png) no-repeat;
+    background-size: 100% auto;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s ease-out;
+}
+
+
+.text5{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    /*position: absolute;*/
+    z-index: 500;
+    background: url(../img/5_TEXT.png) no-repeat;
+    background-size: 100% auto;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s ease-out;
+}
+
+
+.text6{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    /*position: absolute;*/
+    z-index: 500;
+    background: url(../img/6_TEXT.png) no-repeat;
+    background-size: 100% auto;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s ease-out;
+}
+
+.logo7{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    /*position: absolute;*/
+    z-index: 500;
+    background: url(../img/7_LOGO.png) no-repeat;
+    background-size: 100% auto;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s ease-out;
+}
+
+.logo8{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    /*position: absolute;*/
+    z-index: 500;
+    background: url(../img/8_LOGOS.png) no-repeat;
+    background-size: 100% auto;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s ease-out;
+}
+
+.button{
+    position: absolute;
+    height: 17px;
+    width: 115px;
+    bottom: 58px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    /* position: absolute; */
+    z-index: 500;
+    background: url(../img/CTA_BUTTON.png) no-repeat;
+    background-size: 100% auto;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s ease-out;
+}
+
+#content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+
+
+.replay{
+    background-image: url(../img/replay.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform: rotate(180deg);
+    top: 14px;
+    width: 15px;
+    height: 15px;
+    right: 20px;
+    opacity: 0;
+    z-index: 999;
+}
+
+.soundOn{
+    background-image: url("../img/sound-ON.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    width: 23px;
+    height: 24px;
+    z-index: 999;
+
+}
+
+.soundOff{
+    background-image: url("../img/sound-OFF.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 21px;
+    height: 21px;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+
+
+
+

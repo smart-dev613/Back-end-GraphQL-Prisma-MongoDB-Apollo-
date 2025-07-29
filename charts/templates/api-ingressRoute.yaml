@@ -1,0 +1,15 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{.Release.Name}}
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: Host(`{{.Release.Name}}.synkd.life`)
+    kind: Rule
+    services:
+    - name: {{ template "app.fullname" . }}
+      port: {{.Release.Name}}
+  tls:
+    certResolver: myresolver

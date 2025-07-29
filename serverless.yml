@@ -1,0 +1,18 @@
+service: apollo-lambda
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: eu-central-1
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+functions:
+  graphql:
+    handler: src/index.graphqlHandler
+    events:
+      - http:
+          path: graphql
+          method: post
+          cors: true
+    environment:
+      JWT_KEY: sadfjkhdsfajkl43oj12e8nci01i0n123nd048nv082j13m-xc9uu9ncu934n9

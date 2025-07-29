@@ -1,0 +1,31 @@
+hello im an in content
+<script src="../../creativeHelper.js"></script>
+<script>
+  // function qsp(name, url) {
+  //   if (!url) url = window.location.href;
+  //   name = name.replace(/[\[\]]/g, "\\$&");
+  //   var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+  //     results = regex.exec(url);
+  //   if (!results) return null;
+  //   if (!results[2]) return '';
+  //   return decodeURIComponent(results[2].replace(/\+/g, " "));
+  // }
+
+  // console.log(window.parent)
+  // var thisid = qsp('i')
+
+  // setTimeout(function () {
+  //   window.parent.postMessage({type: 'm', id: thisid, metric: 'myevent'}, '*')
+  //   console.log('should be sent')
+  // }, 1000)
+
+  onFenixReady(function () {
+    // alert('fenixready')
+    
+    retargetCampaign(7195, function (data) {
+      console.log(data)
+    })
+
+  })
+
+</script>

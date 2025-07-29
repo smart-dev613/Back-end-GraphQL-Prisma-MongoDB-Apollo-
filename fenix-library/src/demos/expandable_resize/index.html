@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <style type="text/css">
+      html, body { margin: 0px; }
+      body {
+        border: 2px solid blue;
+      }
+    </style>
+    <script src="/creativeHelper.js"></script>
+  </head>
+  <body>
+    This is the test creative for resizing expandables.<br />
+    The creative will automatically change size every 5 seconds, but can be configured to use user interaction.
+    <script type="text/javascript">
+      onFenixReady(() => {
+        setInterval(() => {
+          adjustCreative(1200, 90, {})
+        }, 10000)
+
+        setTimeout(() => {
+          setInterval(() => {
+            adjustCreative(1200, 800, {})
+          }, 10000)
+        }, 5000)
+      })
+    </script>
+  </body>
+</html>

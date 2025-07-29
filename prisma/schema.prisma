@@ -1,0 +1,3153 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DB_MONGO")
+}
+
+enum UserGender {
+  MALE
+  FEMALE
+  OTHER
+  NS
+}
+
+enum RelationshipFamilyRole {
+  REQUESTER
+  RECIPIENT
+}
+
+enum CompanyRole {
+  ADMIN
+  SUPER_ADMIN
+  USER
+  MASTER_ADMIN
+}
+
+enum PromoValueUnit {
+  PERCENTAGE
+  FIXED
+}
+
+enum CouponType {
+  EVENT
+  SUBSCRIPTION
+  TOPUP
+  GENERAL
+}
+
+enum Status {
+  ACTIVE
+  ARCHIVED
+}
+
+enum EventType {
+  PLATFORM_EVENT
+  PLATFORM_EVENT_SLOT
+  PLATFORM_EVENT_PRICING_SLOT
+  CALENDAR_EVENT
+}
+
+enum NotificationStatus {
+  READ
+  UNREAD
+  ARCHIVED
+}
+
+enum InvitationStatus {
+  AWAITING
+  ACCEPTED
+  DECLINED
+  ARCHIVED
+  EXPIRED
+}
+
+enum CalendarStatus {
+  ACTIVE
+  ARCHIVED
+}
+
+enum GeneralStatus {
+  DRAFT
+  LIVE
+  ARCHIVED
+  TEST
+}
+
+enum PlatformEventType {
+  REGULAR
+  TRADE
+  RESTAURANT
+  SALON
+  MEETINGROOMS
+  GATHERING
+  EXHIBITION
+  BIRTHDAY
+  MECHANIC
+  PHOTOGRAPHY
+  CINEMA
+  MUSEUM
+  CONFERENCES
+  WEDDINGS
+  TENNIS
+  BASKETBALL
+  FOOTBALL
+  SQUASH
+  GARAGE
+  RUGBY
+  AFL
+  SPORT
+  NFL
+  SURGERY
+  DENTIST
+}
+
+enum PlatformEventMenuPage {
+  HOME
+  CALENDAR
+  CONTENT
+  CONTENT_CUSTOM
+  COMPANIES
+  ATTENDEES
+  CONTENT_PRICING
+  CLUSTER
+  ADMIN
+  CART
+}
+
+enum EventVenueType {
+  GENERIC
+  ONLINE
+  ROOM
+  HALL
+  SEAT
+  TABLE
+  SLOT
+  COURT
+  BERTH
+  THEATRE
+  PITCH
+}
+
+enum PricingUserType {
+  EMPLOYEE
+  USER
+}
+
+enum CartStatus {
+  PENDING
+  PAYMENT_VERIFICATION
+  PAYMENT_SUCCESS
+  PAYMENT_FAILED
+  APPROVED
+  REJECTED
+  PROCESSED
+  COMPLETE
+  ARCHIVED
+}
+
+enum PricingContentType {
+  SINGLE
+  MULTIPLE
+}
+
+enum PlatformEventLanguage {
+  ENGLISH
+  CHINESE
+  FRENCH
+}
+
+enum CrmClusterType {
+  AUTOMATED
+  MANUAL
+  EVENT
+  CUSTOMERS
+  AUTOMATED_EVENT
+  KEYWORDS
+  DEFAULT
+}
+
+enum CrmUserStatus {
+  SUBSCRIBED
+  UNSUBSCRIBED
+}
+
+enum ClusterType {
+  STRATEGY
+  EVENT
+}
+
+enum BillingDefaultType {
+  DEBIT_CARD
+  BANK_ACCOUNT
+}
+
+enum RelationshipCompanyRole {
+  REQUESTER
+  RECIPIENT
+}
+
+enum CompanyRelationshipType {
+  FAMILY
+  FRIEND
+  BUSINESS
+}
+
+enum RelationshipStatus {
+  SENT
+  CONFIRMED
+}
+
+type BalancePackage {
+  id String @map("_id")
+}
+
+type BalanceServices {
+  balance   Int
+  createdAt DateTime @db.Date
+  type      String
+  updatedAt DateTime @db.Date
+}
+
+type GenericAddress {
+  country    String?
+  postcode   String?
+  town       String?
+  // city       String?
+  // state      String?
+  address    String?
+  addressTwo String?
+}
+
+type BillingPaymentCardStripe {
+  cardID        String
+  setupIntentID String?
+}
+
+type BillingAddress {
+  street  String @map("StreetAddress")
+  city    String @map("City")
+  state   String @map("State")
+  zip     String @map("Zip")
+  country String @map("Country")
+}
+
+type CardStripeDetails {
+  cardID        String
+  setupIntentID String?
+}
+
+type BillingProductPrices {
+  currency      String
+  description   String?
+  price         Int
+  stripePriceId String
+}
+
+type CodeSessionsDevice {
+  Brand      String
+  Browser    String
+  Languages  String
+  OS         String
+  OS_version String
+  Type       String
+}
+
+type CodeSessionsGeo {
+  City               String?
+  Continent          String
+  Country            String
+  CountryCode        String
+  /// Multiple data types found: Array(String): 54%, Array(Int): 46% out of 63 sampled entries
+  Hash               Json
+  /// Multiple data types found: Float: 62.1%, Int: 37.9% out of 29 sampled entries
+  Latitude           Json?
+  /// Multiple data types found: Float: 62.1%, Int: 37.9% out of 29 sampled entries
+  Longitude          Json?
+  Postcode           String?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  PostcodeConfidence Json?
+  Radius             Int
+  Region             String?
+}
+
+type CodeTargeting {
+  ActiveDates CodeTargetingActiveDates?
+  Cities      String[]
+  Countries   String[]
+  DayOfWeek   String[]
+  Max         Int?
+  Min         Int?
+  TimeOfDay   Int[]
+  URL         String
+}
+
+type CodeTargetingActiveDates {
+  End   DateTime @db.Date
+  Start DateTime @db.Date
+}
+
+type CompanyMembershipProfiles {
+  bio                 String
+  categorisedKeywords String[]
+  keywords            String[]
+  locale              String
+}
+
+type CompanyProfiles {
+  bio                 String
+  categorisedKeywords String[]
+  keywords            String[]
+  locale              String
+}
+
+type CompanyTosAcceptance {
+  date Int
+  id   String @db.ObjectId
+  ip   String
+}
+
+type CrmConsumerContactInfo {
+  Email         String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  FacebookId    Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  LandlinePhone Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  MobilePhone   Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Twitter       Json?
+}
+
+type CrmConsumerData {
+  ContactInfo CrmConsumerDataContactInfo
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  DateOfBirth Json?
+  Device      CrmConsumerDataDevice
+  Fingerprint String
+  Firstname   String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Gender      Json?
+  Home        CrmConsumerDataHome
+  Lastname    String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Title       Json?
+  UseAsMaster Boolean
+  Work        CrmConsumerDataWork
+}
+
+type CrmConsumerDataContactInfo {
+  Email         String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  FacebookId    Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  LandlinePhone Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  MobilePhone   Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Twitter       Json?
+}
+
+type CrmConsumerDataDevice {
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Brand      Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Browser    Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Languages  Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  OS         Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  OS_version Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Type       Json?
+}
+
+type CrmConsumerDataHome {
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Address   Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  City      Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Continent Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Country   Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Region    Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Zipcode   Json?
+}
+
+type CrmConsumerDataWork {
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Address  Json?
+  Company  String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Income   Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  JobTitle Json?
+}
+
+type CrmConsumerHome {
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Address   Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  City      Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Continent Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Country   Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Region    Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Zipcode   Json?
+}
+
+type CrmConsumerWork {
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Address  Json?
+  Company  String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Income   Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  JobTitle Json?
+}
+
+type CrmQuestionSessionDevice {
+  Brand      String
+  Browser    String
+  Languages  String
+  OS         String
+  OS_version String
+  Type       String
+}
+
+type CrmQuestionSessionGeo {
+  City        String
+  Continent   String
+  Country     String
+  CountryCode String
+  Hash        String[]
+  Radius      Int
+  Region      String
+}
+
+type CrmSelectedRows {
+  Email     String?
+  Firstname String?
+  Lastname  String?
+  Phone     String?
+  UserID    Json
+}
+
+type CrmUserAddress {
+  address  Json?
+  city     Json?
+  country  String?
+  postcode Json?
+  state    Json?
+  town     Json?
+}
+
+model ProcessedSubscription {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  subscriptionId String   @unique
+  createdAt      DateTime @default(now())
+  couponId       String
+}
+
+model BillingItem {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  description String?
+  gross       Int?
+  lineID      String
+  net         Int?
+  quantity    Int
+  referenceId String?
+  service     String?
+  tax         Int?
+
+  billingInvoice   BillingInvoice? @relation(fields: [billingInvoiceId], references: [id])
+  billingInvoiceId String?         @db.ObjectId
+}
+
+type DemocrmCompanies {
+  email String
+  role  String
+}
+
+type MailingSessionEvents {
+  Data      MailingSessionEventsData
+  Name      String
+  Time      DateTime                 @db.Date
+  /// Multiple data types found: Float: 0.6%, Int: 99.4% out of 4237 sampled entries
+  TimeDelta Json
+}
+
+type MailingSessionEventsData {
+  attempt     Int?
+  city        String?
+  client_name String? @map("client-name")
+  client_os   String? @map("client-os")
+  client_type String? @map("client-type")
+  continent   String?
+  country     String?
+  device_type String? @map("device-type")
+  region      String?
+  response    String?
+  severity    String?
+  user_agent  String? @map("user-agent")
+}
+
+type MailingSessionRecipient {
+  Email     String
+  Firstname String?
+  Lastname  String
+  /// Multiple data types found: String: 99.6%, BigInt: 0.4% out of 1000 sampled entries
+  Phone     Json?
+  /// Multiple data types found: String: 31.8%, String (ObjectId): 68.2% out of 1000 sampled entries
+  UserID    Json
+}
+
+type MarketingTopupServicePricing {
+  id       String
+  amount   Int
+  currency String
+  price    Float
+}
+
+type MediaCreativeAssets {
+  Height String
+  Index  Int
+  Path   String
+  Width  String
+}
+
+type MediaMarginsClientRelationships {
+  /// Multiple data types found: String: 33.3%, Int: 66.7% out of 3 sampled entries
+  Fee           Json
+  /// Multiple data types found: String: 66.7%, Int: 33.3% out of 3 sampled entries
+  FeePercentage Json
+  FeeType       String
+  Relationship  String
+}
+
+type MediaMarginsRelationships {
+  Fee           String
+  FeePercentage String
+  FeeType       String?
+  /// Multiple data types found: String: 81.3%, Int: 18.8% out of 16 sampled entries
+  Relationship  Json?
+}
+
+type MediaSessionDevice {
+  Brand      String
+  Browser    String
+  Languages  String
+  OS         String
+  OS_version String
+  Type       String
+}
+
+type MediaSessionEvents {
+  Name      String
+  Time      DateTime @db.Date
+  TimeDelta Int
+}
+
+type MediaSessionGeo {
+  City               String?
+  Continent          String?
+  Country            String?
+  CountryCode        String?
+  Hash               Int[]
+  /// Multiple data types found: Float: 88.2%, Int: 11.8% out of 1000 sampled entries
+  Latitude           Json?
+  /// Multiple data types found: Float: 88.2%, Int: 11.8% out of 1000 sampled entries
+  Longitude          Json?
+  Postcode           String?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  PostcodeConfidence Json?
+  Radius             Int?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Region             Json?
+}
+
+type MediaSessionSynkdUser {
+  Email   String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Gender  Json?
+  Name    String
+  Surname String
+  phone   String
+}
+
+model PlatformEventContents {
+  id                    String                        @id @default(auto()) @map("_id") @db.ObjectId
+  body                  String
+  contentStatus         String?                       @default("ACTIVE")
+  createdAt             DateTime                      @default(now()) @db.Date
+  endDate               DateTime?                     @db.Date
+  imageURL              String
+  images                String[]
+  isCartAvailable       Boolean
+  isConstraintAvailable Boolean
+  isPricingAvailable    Boolean
+  isScheduleAvailable   Boolean
+  isVenueChecked        Boolean?
+  keywords              String[]
+  linkURL               String
+  links                 PlatformEventContentsLinks[]
+  name                  String
+  pricing               PlatformEventContentPricing[] @relation("PlatformEventContentPricingContent")
+  pricingMaster         PlatformEventContentPricing?  @relation("ContentPricingMaster", fields: [pricingMasterId], references: [id])
+  pricingMasterId       String?                       @db.ObjectId
+  pricingType           String
+  selectedVenue         String?
+  startDate             DateTime?                     @db.Date
+  subContentType        String
+  updatedAt             DateTime                      @updatedAt @db.Date
+
+  PlatformEvent   PlatformEvent? @relation(fields: [platformEventId], references: [id])
+  platformEventId String?        @db.ObjectId
+}
+
+type PlatformEventContentsLinks {
+  id   String @db.ObjectId
+  link String
+  name String
+}
+
+model PlatformEventMenus {
+  id            String                  @id @default(auto()) @map("_id") @db.ObjectId
+  adminOnly     Boolean                 @default(false)
+  label         String
+  link          String?
+  parameter     String?
+  show          Boolean                 @default(true)
+  showToAll     Boolean?
+  isPublic      Boolean?
+  type          String
+  userRelations PlatformEventMenuUser[]
+
+  platformEvent   PlatformEvent? @relation(fields: [platformEventId], references: [id])
+  platformEventId String?        @db.ObjectId
+}
+
+model PlatformEventMenuUser {
+  id                  String  @id @default(auto()) @map("_id") @db.ObjectId
+  platformEventMenuId String  @db.ObjectId
+  userId              String  @db.ObjectId
+  isAdmin             Boolean @default(false) // Indicates if the user is an admin for the menu
+  isVisible           Boolean @default(false) // Indicates if the user has visibility access to the menu
+
+  platformEventMenu PlatformEventMenus @relation(fields: [platformEventMenuId], references: [id])
+  user              user               @relation(fields: [userId], references: [id])
+
+  @@unique([platformEventMenuId, userId])
+}
+
+type PlatformEventTheme {
+  logoURL                 String?
+  primaryColour           String?
+  primaryTextColour       String?
+  secondaryColour         String?
+  calendarPrimaryColour   String?
+  calendarSecondaryColour String?
+
+  secondaryTextColour String?
+}
+
+type PublisherSiteDevices {
+  desktop Boolean?
+  id      String?  @db.ObjectId
+  mobile  Boolean?
+  tablet  Boolean?
+}
+
+type PublisherTagAssignedCreativeFlights {
+  FlightID String
+  Share    Int
+  TagID    Int
+}
+
+type PublisherTagCreativeTags {
+  Share Int
+  TagID Int
+}
+
+type PublisherTagSize {
+  Height String
+  Width  String
+}
+
+type ResearchQuestions {
+  Active           Boolean
+  AnswerRequired   Boolean
+  Answers          ResearchQuestionsAnswers[]
+  Contact_Us       String?                    @map("Contact Us")
+  GoToQuestion     Int?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Miss             Json?
+  Order            Int?
+  Question         String?
+  RandomiseAnswers Boolean
+  ShortCaption     String?
+  TextAreaHeight   Int
+  Type             String?
+  id               Int?                       @map("_id")
+}
+
+type ResearchQuestionsAnswers {
+  Answer       String
+  GoToQuestion Int?
+  IsCorrect    Boolean
+  Miss         Int?
+  Order        Int
+  ShortCaption String
+}
+
+type ResearchSessionsAnswers {
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 0 String[] @map("0")
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 1 String[] @map("1")
+  /// Multiple data types found: Json: 0.3%, Array(String): 96.2%, Array(Unknown): 3.5% out of 344 sampled entries
+  Answers    Json?
+  /// Multiple data types found: Float: 3.2%, Int: 96.8% out of 311 sampled entries
+  Marks      Json?
+  QuestionID Int?
+}
+
+type ResearchSessionsDevice {
+  Brand      String?
+  /// Multiple data types found: String: 28.7%, ResearchSessionsDeviceBrowser: 71.3% out of 225 sampled entries
+  Browser    Json?
+  Languages  String?
+  /// Multiple data types found: String: 23.3%, ResearchSessionsDeviceOs: 76.7% out of 225 sampled entries
+  OS         Json?
+  OS_version String?
+  Type       String?
+}
+
+type ResearchSessionsDeviceBrowser {
+  name    String
+  version String
+}
+
+type ResearchSessionsDeviceOs {
+  name        String
+  version     String
+  versionName String
+}
+
+type ResearchSessionsGeo {
+  City               String?
+  Continent          String?
+  Country            String?
+  CountryCode        String?
+  /// Multiple data types found: Array(String): 12.6%, Array(Int): 87.4% out of 231 sampled entries
+  Hash               Json?
+  /// Multiple data types found: Float: 98.8%, Int: 1.2% out of 202 sampled entries
+  Latitude           Json?
+  /// Multiple data types found: Float: 98.8%, Int: 1.2% out of 202 sampled entries
+  Longitude          Json?
+  Postcode           String?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  PostcodeConfidence Json?
+  Radius             Int?
+  Region             String?
+}
+
+type ResearchUser {
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Address                  Json?
+  BirthDate                DateTime?                    @db.Date
+  City                     String?
+  Company                  Int
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Country                  Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  DateFormatString         Json?
+  Email                    String
+  Enable                   Int
+  Enabled                  Boolean
+  FenixPassword            String
+  FenixUserGroup           String                       @db.ObjectId
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Gender                   Json?
+  LastLogin                DateTime                     @db.Date
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Mobile                   Json?
+  Name                     String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Phone                    Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  PublicKey                Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  ReceiveNotifications     Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Region                   Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Salutation               Json?
+  Surname                  String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  TimeZoneID               Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Zip                      Json?
+  address                  ResearchUserAddress
+  avatar                   String
+  companies                String[]
+  company                  String                       @db.ObjectId
+  companyLimit             Int?
+  createdAt                DateTime                     @db.Date
+  deliveryAddress          ResearchUserDeliveryAddress?
+  doNotShowWalkthrough     Boolean?
+  emailVerified            Boolean
+  facebook                 String?
+  gender                   String
+  id                       String                       @map("_id") @db.ObjectId
+  instagram                String?
+  inviteUsed               Boolean
+  linkedIn                 String?
+  nationalSecurityNumber   String?
+  passportNumber           String?
+  phone                    String
+  phoneVerified            Boolean
+  profiles                 ResearchUserProfiles[]
+  qq                       String?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  secondaryProfilePic      Json?
+  skype                    String?
+  socialLine               String?
+  synkdDataSellAllowed     Boolean?
+  synkdDataSellAllowedDate DateTime?                    @db.Date
+  twitter                  String?
+  updatedAt                DateTime                     @db.Date
+  userProfileLockedUntil   DateTime?                    @db.Date
+  walkthroughStep          Int?
+  weChat                   String?
+  weibo                    String?
+}
+
+type ResearchUserAddress {
+  Address  String?
+  Country  String?
+  Postcode String?
+  Town     String?
+  address  String?
+  city     String?
+  country  String?
+  id       String  @db.ObjectId
+  postcode String?
+  town     String?
+}
+
+type ResearchUserDeliveryAddress {
+  Address  String?
+  Country  String?
+  Postcode String?
+  Town     String?
+  city     String?
+  id       String  @db.ObjectId
+}
+
+type ResearchUserProfiles {
+  bio                 String
+  categorisedKeywords String[]
+  keywords            String[]
+  locale              String
+}
+
+type UserAddress {
+  Address  String?
+  Country  String?
+  Postcode String?
+  Town     String?
+  address  String?
+  city     String?
+  country  String?
+  id       String  @db.ObjectId
+  postcode String?
+  town     String?
+}
+
+type UserDeliveryAddress {
+  city String?
+  id   String  @db.ObjectId
+}
+
+type UserProfiles {
+  bio                 String?
+  categorisedKeywords String[]
+  clusterKeywords     Json?
+  keywords            String[]
+  locale              String
+}
+
+model Balance {
+  id          String            @id @default(auto()) @map("_id") @db.ObjectId
+  balanceType String
+  companyId   String
+  // company_Id  String
+  createdAt   DateTime          @default(now()) @db.Date
+  /// Multiple data types found: String (ObjectId): 90.9%, BalancePackage: 9.1% out of 11 sampled entries
+  package     Json?
+  services    BalanceServices[]
+  updatedAt   DateTime          @updatedAt @db.Date
+
+  @@index([package], map: "package_R")
+}
+
+model BankAccount {
+  id                      String    @id @default(auto()) @map("_id") @db.ObjectId
+  account_holder_name     String
+  account_holder_type     String
+  account_number          String
+  counterparty_account_id String?
+  counterparty_id         String?
+  country                 String?
+  currency                String?
+  iban                    String?
+  routing_number          String
+  sort_bsb_number         String?
+  stripeBankAccountId     String?
+  company                 company[]
+}
+
+model BillingCoupon {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  companyId String
+  eventId   String?
+
+  couponType  String?
+  couponUsage String?
+
+  oneUsePerCompany Boolean
+  oneUsePerUser    Boolean
+
+  onlyTheseCompanies    company[] @relation("CouponPermittedCompany", fields: [onlyTheseCompaniesIds], references: [id])
+  onlyTheseCompaniesIds String[]  @db.ObjectId
+
+  onlyTheseUsers    user[]   @relation("CouponPermittedUser", fields: [onlyTheseUsersIds], references: [id])
+  onlyTheseUsersIds String[] @db.ObjectId
+
+  currentUses Int?
+  maximumUses Int?
+
+  promoCode String
+
+  stripeCouponId String?
+  unit           String
+
+  createdAt DateTime @default(now()) @db.Date
+  updatedAt DateTime @updatedAt @db.Date
+
+  usedByCompanyMembership    CompanyMembership[] @relation("CouponUsedByCompanyMembership", fields: [usedByCompanyMembershipIds], references: [id])
+  usedByCompanyMembershipIds String[]            @db.ObjectId
+
+  usedByUser    user[]   @relation("CouponUsedByUser", fields: [usedByUserIds], references: [id])
+  usedByUserIds String[] @db.ObjectId
+
+  companyUsage   CompanyCouponUsage[] @relation("CouponCompanyUsage")
+  isSignupCoupon Boolean?
+  isReferral     Boolean?
+
+  startDate DateTime  @db.Date
+  endDate   DateTime? @db.Date
+
+  duration String?
+  value    Float
+  user     user?   @relation(fields: [userId], references: [id])
+  userId   String? @db.ObjectId
+
+  referredUsers company[]           @relation("ReferralCode")
+  createdByUser UserCouponCreated[] @relation("CouponUsers")
+}
+
+model CompanyCouponUsage {
+  id                          String         @id @default(auto()) @map("_id") @db.ObjectId
+  companyId                   String?        @db.ObjectId
+  couponId                    String         @db.ObjectId // Reference to the coupon being used
+  BillingCoupon               BillingCoupon? @relation("CouponCompanyUsage", fields: [couponId], references: [id]) // Added relation here
+  topupRedemptionCount        Int?
+  subscriptionRedemptionCount Int?
+  isReferral                  Boolean?
+  couponOwnerCompanyId        String?        @db.ObjectId
+  createdAt                   DateTime       @default(now()) @db.Date
+  updatedAt                   DateTime       @updatedAt @db.Date
+}
+
+model BillingProduct {
+  id              String                 @id @default(auto()) @map("_id") @db.ObjectId
+  description     String?
+  fulfilment      Json?
+  name            String
+  prices          BillingProductPrices[]
+  stripeProductId String? //make optional to account for free package
+}
+
+model BillingTaxRate {
+  id           String @id @default(auto()) @map("_id") @db.ObjectId
+  countryCode  String
+  currencyCode String
+  rate         Int
+  type         String
+}
+
+model BotBlacklist {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  BlacklistReason String
+  Campaign        Int
+  EnforcedDate    DateTime @db.Date
+  Fingerprint     String
+  IPAddress       String
+}
+
+model BotWhitelist {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  Campaign        Int
+  EnforcedDate    DateTime @db.Date
+  Fingerprint     String
+  IPAddress       String
+  WhitelistReason String
+}
+
+model CalendarEvent {
+  id                 String             @id @default(auto()) @map("_id") @db.ObjectId
+  /// Field referred in an index, but found no data to define the type.
+  attendees          EventInvitation[]
+  createdAt          DateTime           @default(now()) @db.Date
+  description        String?
+  endAt              DateTime           @db.Date
+  name               String
+  notificationStatus String?
+  organiser          CompanyMembership? @relation("OrganiserCalendarEvent", fields: [organiserId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  organiserId        String?            @db.ObjectId
+  startAt            DateTime           @db.Date
+  status             String             @default("ACTIVE")
+  updatedAt          DateTime           @updatedAt @db.Date
+
+  calendarInvitationBaclink CalendarInvitation[] @relation("CalendarInvitationDetail")
+
+  geo      String?
+  location String?
+
+  @@index([organiserId], map: "organiser_R")
+}
+
+model CalendarInvitation {
+  id        String             @id @default(auto()) @map("_id") @db.ObjectId
+  /// Field referred in an index, but found no data to define the type.
+  createdAt DateTime           @default(now()) @db.Date
+  /// Field referred in an index, but found no data to define the type.
+  invitee   CompanyMembership? @relation(name: "UserWhoInvitedOthers", fields: [inviteeId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  inviteeId String?            @db.ObjectId
+
+  declined CompanyMembership[] @relation(name: "UserDeclined")
+  inviteed CompanyMembership[] @relation(name: "UserInvited")
+  accepted CompanyMembership[] @relation(name: "UserAccepted")
+
+  notificationStatus String?
+  updatedAt          DateTime @updatedAt @db.Date
+
+  calendarEvent   CalendarEvent? @relation("CalendarInvitationDetail", fields: [calendarEventId], references: [id])
+  calendarEventId String?        @db.ObjectId
+}
+
+model ChannelPermissions {
+  id         String             @id @default(auto()) @map("_id") @db.ObjectId
+  employeeId String?            @db.ObjectId
+  employee   CompanyMembership? @relation("EmployeeChannelPermissions", fields: [employeeId], references: [id])
+  scope      ChannelScopes // Make sure ChannelScopes is defined as an enum or model
+  campaignId String?            @db.ObjectId
+  campaign   Campaign?          @relation("ChannelPermissionCampaign", fields: [campaignId], references: [id])
+  item       String?
+  cluster    String?
+  createdAt  DateTime           @default(now()) @db.Date
+
+  @@map("ChannelPermissions")
+}
+
+enum ChannelScopes {
+  CAMPAIGN
+  CLUSTER
+  FLIGHT
+  CODE
+  MAILING
+  RESEARCH
+  STUDIO
+}
+
+model CommunityCategory {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now()) @db.Date
+  updatedAt DateTime @default(now()) @updatedAt @db.Date
+  title     String   @unique
+}
+
+model CommunityNotification {
+  id         String                    @id @default(auto()) @map("_id") @db.ObjectId
+  type       CommunityNotificationType
+  title      String
+  targetId   String
+  receiver   user                      @relation("UserReceivedNotification", fields: [receiverId], references: [id])
+  receiverId String
+  isSeen     Boolean                   @default(true)
+  createdAt  DateTime                  @default(now())
+  seenAt     DateTime?
+
+  @@map("CommunityNotification")
+}
+
+enum CommunityNotificationType {
+  NEW_SUPPORT_QUESTION
+  NEW_SUPPORT_REPLY
+  NEW_HUB_QUESTION
+  NEW_HUB_REPLY
+}
+
+model CommunityQuestion {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now()) @db.Date
+  hyperlink String
+  keywords  String
+  /// Field referred in an index, but found no data to define the type.
+
+  order Int
+
+  returningAnswer   String
+  status            String
+  statusDescription String?
+  title             String
+  topic             String
+  updatedAt         DateTime @updatedAt @db.Date
+  views             Int
+
+  replies CommunityReply[] @relation(name: "RepliesToCommunityQuestions")
+
+  postedBy   user   @relation(name: "UserPostedCommunityQuestions", fields: [postedById], references: [id])
+  postedById String @db.ObjectId
+
+  checkedBy   user?  @relation(name: "UserCheckedCommunityQuestions", fields: [checkedById], references: [id])
+  checkedById String @db.ObjectId
+
+  likedBy user[] @relation("UserLikesCommunityQuestions")
+}
+
+model CommunityRejectionResult {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt   DateTime @default(now()) @db.Date
+  description String
+  title       String
+  updatedAt   DateTime @default(now()) @updatedAt @db.Date
+}
+
+model CommunityReply {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  answer    String
+  createdAt DateTime @default(now()) @db.Date
+  hyperlink String
+
+  likedBy    user[] @relation(name: "UserLikesCommunitiesReplies")
+  dislikedBy user[] @relation(name: "UserDislikesCommunitiesReplies")
+  reportedBy user[] @relation(name: "UserReportedCommunitiesReplies")
+
+  postedBy   user?   @relation(name: "UserPostedCommunityReply", fields: [postedById], references: [id])
+  postedById String? @db.ObjectId
+
+  checkedBy   user?   @relation(name: "UserCheckedCommunityReply", fields: [checkedById], references: [id])
+  checkedById String? @db.ObjectId
+
+  question   CommunityQuestion @relation(name: "RepliesToCommunityQuestions", fields: [questionId], references: [id])
+  questionId String            @db.ObjectId
+  status     String
+  updatedAt  DateTime          @updatedAt @db.Date
+
+  rates CommunityReplyRate[] @relation("reply_R")
+}
+
+model CommunityReplyRate {
+  id         String          @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt  DateTime        @default(now()) @db.Date
+  postedBy   user            @relation(name: "UserPostedCommunityReplyRate", fields: [postedById], references: [id])
+  postedById String          @db.ObjectId
+  rate       Int
+  reply      CommunityReply? @relation("reply_R", fields: [replyId], references: [id])
+  replyId    String?         @db.ObjectId
+}
+
+model CompanyDomain {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  company   company  @relation(fields: [companyId], references: [id])
+  companyId String   @db.ObjectId
+  domain    String   @unique // Ensures that each domain is unique
+  verified  Boolean  @default(false) // Default to false if not specified
+  createdAt DateTime @default(now()) @db.Date // Automatically sets the creation time
+  updatedAt DateTime @updatedAt @db.Date
+}
+
+model CompanyEmailDomain {
+  id        String            @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime          @default(now()) @db.Date
+  updatedAt DateTime          @updatedAt @db.Date
+  company   company           @relation(fields: [companyId], references: [id])
+  companyId String            @db.ObjectId // Foreign key to Company
+  domain    String
+  status    EmailDomainStatus @default(CREATED)
+
+  @@map("CompanyEmailDomain") // Optional: to map to a specific collection name in MongoDB
+}
+
+enum EmailDomainStatus {
+  CREATED
+  VERIFIED
+  ARCHIVED
+}
+
+model CompanyMembership {
+  id        String   @id @map("_id") @db.ObjectId
+  avatar    String?
+  /// Field referred in an index, but found no data to define the type.
+  company   company? @relation(name: "CompanyMembership", fields: [companyId], references: [id])
+  companyId String?  @map("company") @db.ObjectId // map to company in the db
+
+  fenixUserGroup UserGroup? @relation(fields: [userGroupId], references: [id])
+  userGroupId    String?    @map("fenixUserGroup") @db.ObjectId // Map this field to "fenixUserGroup" in the database
+
+  createdAt        DateTime                    @default(now()) @db.Date
+  department       String?
+  email            String?
+  personalEmail    String?
+  eventInvitations EventInvitation[] // @relation(name: "CompanyMembershipEventInvitations")
+  jobTitle         String?
+  phone            String?
+  profiles         CompanyMembershipProfiles[]
+  role             String
+  status           String                      @default("ACTIVE")
+  updatedAt        DateTime                    @updatedAt @db.Date
+  salaryRange      String?
+  startDate        DateTime?                   @db.Date
+  user             user?                       @relation(name: "UserToCompanies", fields: [userId], references: [id])
+  userId           String?                     @db.ObjectId
+
+  companyAccessGivenTo   company? @relation(name: "EmployeeCanAccessMarketing", fields: [companyAccessGivenToId], references: [id])
+  companyAccessGivenToId String?  @db.ObjectId
+
+  platformEventOrganiserBacklink PlatformEvent[] @relation("PlatformEventCompanyMembershipOrganiser")
+
+  platformEventSlotBacklink  PlatformEventSlot[]
+  platformEventMemberProfile PlatformEventMember[] @relation("PlateEventMembershipProfileId")
+
+  relationshipCompanyInfoBacklink   RelationshipCompanyInfo? @relation(fields: [relationshipCompanyInfoIdBacklink], references: [id])
+  relationshipCompanyInfoIdBacklink String?                  @db.ObjectId
+
+  companyRepresentativeBacklink company[]        @relation("Representative")
+  permissions                   PermissionsNew[] @relation(name: "EmployeePermissions")
+
+  landline String?
+
+  calendarInvitationInvitedBacklinkId String?             @db.ObjectId
+  calendarInvitationInvitedBacklink   CalendarInvitation? @relation("UserInvited", fields: [calendarInvitationInvitedBacklinkId], references: [id])
+
+  calendarInvitationAcceptedBacklink   CalendarInvitation? @relation("UserAccepted", fields: [calendarInvitationAcceptedBacklinkId], references: [id])
+  calendarInvitationAcceptedBacklinkId String?             @db.ObjectId
+
+  calendarInvitationDeclinedBacklink   CalendarInvitation? @relation("UserDeclined", fields: [calendarInvitationDeclinedBacklinkId], references: [id])
+  calendarInvitationDeclinedBacklinkId String?             @db.ObjectId
+
+  calendarInvitationUserWhoInvitedOthersBacklink CalendarInvitation[] @relation("UserWhoInvitedOthers")
+  platformEventCartBacklink                      PlatformEventCart[]  @relation("EmployeeActor")
+  PlatformEventCart                              PlatformEventCart[]
+
+  platformEventContentPricing   PlatformEventContentPricing? @relation("PlatformEventContentPricingEmployee", fields: [platformEventContentPricingId], references: [id])
+  platformEventContentPricingId String?                      @db.ObjectId
+  channelPermissions            ChannelPermissions[]         @relation("EmployeeChannelPermissions") // Inverse relation
+
+  eventRequestInvitationCompanyMembershipBacklink EventRequestInvitation[] @relation("EventRequestInvitationCompanyMembership")
+
+  platformEventCartUserCompanyMembershipBacklink PlatformEventCart[] @relation("UserCompanyMembership")
+
+  calenderEventOrganiserBacklink CalendarEvent[] @relation("OrganiserCalendarEvent")
+
+  couponUsedByCompanyMembership    BillingCoupon[] @relation("CouponUsedByCompanyMembership", fields: [couponUsedByCompanyMembershipIds], references: [id])
+  couponUsedByCompanyMembershipIds String[]        @db.ObjectId
+
+  companyMasterContactBacklink  company[] @relation("MasterContact")
+  companyBillingContactBacklink company[] @relation("BillingContact")
+
+  @@index([companyId], map: "company_R")
+  @@index([userId], map: "user_R")
+}
+
+model CompanyRelationship {
+  id                      String                    @id @default(auto()) @map("_id") @db.ObjectId
+  companies               RelationshipCompanyInfo[] @relation("CompanyRelationshipCompanies")
+  createdAt               DateTime                  @default(now()) @db.Date
+  status                  RelationshipStatus        @default(SENT)
+  updatedAt               DateTime                  @updatedAt @db.Date
+  RelationshipPermissions RelationshipPermissions[]
+}
+
+model CrmCluster {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  clusterType   String
+  createdAt     DateTime @default(now()) @db.Date
+  /// Field referred in an index, but found no data to define the type.
+  createdByUser Json?
+
+  crmQuestion CrmQuestion[]
+
+  description String?
+  name        String
+  status      String   @default("ACTIVE")
+  updatedAt   DateTime @updatedAt @db.Date
+
+  userIds String[]  @db.ObjectId
+  users   CrmUser[] @relation("CrmClusterUsers", fields: [userIds], references: [id])
+
+  companyId String?  @db.ObjectId
+  company   company? @relation("CompanyCrmClusters", fields: [companyId], references: [id], onDelete: Cascade) // or other appropriate action
+
+  platformEventCustomCluster PlatformEvent? @relation("EventClusterCustom", fields: [platformEventCustomClusterId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  platformEventCustomClusterId String? @db.ObjectId
+
+  platformEventCluster PlatformEvent? @relation("EventCluster", fields: [platformEventClusterId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  platformEventClusterId String? @db.ObjectId
+
+  subClusters CrmSubCluster[] @relation("CrmSubClusters")
+
+  @@index([companyId], map: "company_R")
+}
+
+model CrmQuestion {
+  id                  String              @id @default(auto()) @map("_id") @db.ObjectId
+  archiveDate         DateTime?           @db.Date
+  company             company?            @relation("CrmQuestionToCompany", fields: [companyId], references: [id])
+  companyId           String?             @db.ObjectId
+  createdAt           DateTime            @default(now()) @db.Date
+  /// Field referred in an index, but found no data to define the type.
+  createdByUser       Json?
+  id_number           Int
+  maximumSelections   Int                 @default(1)
+  minimumSelections   Int                 @default(1)
+  options             CrmQuestionOption[] @relation("CrmQuestionOptionRelation")
+  questionDescription String
+  questionShortText   String
+  status              String              @default("DRAFT")
+  type                String              @default("STRATEGY")
+  updatedAt           DateTime            @updatedAt @db.Date
+
+  CrmQuestionResponseToQuestion CrmQuestionResponse[] @relation("CrmQuestionResponseToQuestion")
+
+  crmCluster   CrmCluster? @relation(fields: [crmClusterId], references: [id])
+  crmClusterId String?     @db.ObjectId
+
+  @@index([createdByUser], map: "createdByUser_R")
+}
+
+model CrmQuestionOption {
+  id                String @id @default(auto()) @map("_id") @db.ObjectId
+  optionDescription String
+  optionShortText   String
+
+  crmSubCluster   CrmSubCluster? @relation(fields: [crmSubClusterId], references: [id])
+  crmSubClusterId String?        @db.ObjectId
+
+  question CrmQuestion? @relation("CrmQuestionOptionRelation", fields: [questionId], references: [id])
+
+  questionId String? @db.ObjectId
+
+  crmQuestionResponseToQuestion   CrmQuestionResponse? @relation("CrmQuestionResponseToOption", fields: [crmQuestionResponseToQuestionId], references: [id])
+  crmQuestionResponseToQuestionId String?              @db.ObjectId
+
+  @@index([optionShortText], map: "optionShortText_R")
+}
+
+model CrmQuestionResponse {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  respondingUser   user?   @relation("CrmQuestionResponseToUser", fields: [respondingUserId], references: [id])
+  respondingUserId String? @db.ObjectId
+
+  response CrmQuestionOption[] @relation("CrmQuestionResponseToOption")
+
+  responseToQuestion CrmQuestion? @relation("CrmQuestionResponseToQuestion", fields: [responseToQuestionId], references: [id])
+
+  responseToQuestionId String? @db.ObjectId
+  responseType         String  @default("USER_FILLED")
+
+  createdAt DateTime  @default(now()) @db.Date
+  updatedAt DateTime? @updatedAt @db.Date
+
+  @@index([responseToQuestionId], map: "responseToQuestion_R")
+  @@index([respondingUserId], map: "respondingUser_R")
+}
+
+model CrmSubCluster {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  clusterType String
+  createdAt   DateTime @default(now()) @db.Date
+
+  crmOption CrmQuestionOption[]
+
+  name      String
+  updatedAt DateTime @updatedAt @db.Date
+
+  userIds String[]  @db.ObjectId
+  users   CrmUser[] @relation("CrmSubClusterUsers", fields: [userIds], references: [id])
+
+  description String?
+
+  parentCluster   CrmCluster? @relation("CrmSubClusters", fields: [parentClusterId], references: [id])
+  parentClusterId String?     @db.ObjectId
+}
+
+model CrmUser {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now()) @db.Date
+  updatedAt DateTime @updatedAt @db.Date
+
+  notificationStatus String @default("UNREAD") // Default value as per GraphQL
+
+  firstName String
+  lastName  String
+  email     String
+  emailList String[] // Assuming this should be an array based on GraphQL
+  phone     String?
+  gender    String?
+  dob       DateTime? // Change type to DateTime based on GraphQL
+  address   CrmUserAddress? @map("address") // Assuming this is defined elsewhere
+
+  otherData Json? // Remains Json
+  status    String @default("SUBSCRIBED") // Default value as per GraphQL
+
+  personal_facebook             String?
+  personal_instagram            String?
+  personal_twitter              String?
+  personal_wechat               String?
+  personal_qq                   String?
+  personal_personal_id          String?
+  personal_notes                String?
+  personal_notes_follow_up_date DateTime?
+
+  // Employee related fields
+  em_job_type             String?
+  em_department           String?
+  em_email                String?
+  em_phone                String?
+  em_notes                String?
+  em_notes_follow_up_date DateTime?
+
+  // Company related fields
+  cm_name                 String?
+  cm_email                String?
+  cm_website              String?
+  cm_phone                String?
+  cm_regnum               String?
+  cm_sales_tax            String?
+  cm_address              String?
+  cm_city                 String?
+  cm_zipcode              String?
+  cm_country              String?
+  cm_category             String?
+  cm_notes                String?
+  cm_notes_follow_up_date DateTime?
+
+  associatedCompany company @relation("CrmUserToCompany", fields: [companyId], references: [id])
+  user              user?   @relation("CrmUserToUser", fields: [userId], references: [id])
+
+  companyId String  @map("associatedCompany") @db.ObjectId
+  userId    String? @map("user") @db.ObjectId
+
+  crmClusterIds String[]     @db.ObjectId
+  crmClusters   CrmCluster[] @relation("CrmClusterUsers", fields: [crmClusterIds], references: [id])
+
+  crmSubClusterIds String[]        @db.ObjectId
+  crmSubClusters   CrmSubCluster[] @relation("CrmSubClusterUsers", fields: [crmSubClusterIds], references: [id])
+}
+
+model Currency {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model CurrencyTable {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  baseCurrency   String
+  createdAt      DateTime @default(now()) @db.Date
+  currentRate    String
+  targetCurrency String
+  time           String
+  updateTime     DateTime @db.Date
+  updatedAt      DateTime @updatedAt @db.Date
+}
+
+model CurrencyTables {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  baseCurrency   String
+  createdAt      DateTime @default(now()) @db.Date
+  currentRate    String
+  targetCurrency String
+  time           String
+  updateTime     DateTime @db.Date
+  updatedAt      DateTime @updatedAt @db.Date
+}
+
+model DemoType {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model EventInvitation {
+  id                 String             @id @default(auto()) @map("_id") @db.ObjectId
+  calendarSlotId     String?            @db.ObjectId
+  createdAt          DateTime           @default(now()) @db.Date
+  eventType          String?
+  invitationEmail    String?
+  invitationStatus   String             @default("AWAITING")
+  /// Field referred in an index, but found no data to define the type.
+  invitee            CompanyMembership? @relation(fields: [inviteeId], references: [id])
+  inviteeId          String?            @db.ObjectId
+  lastInviteSent     DateTime           @db.Date
+  notificationStatus String?
+  updatedAt          DateTime           @updatedAt @db.Date
+  calendarEvent      CalendarEvent?     @relation(fields: [calendarEventId], references: [id])
+  calendarEventId    String?            @db.ObjectId
+  platformEvent      PlatformEvent?     @relation("PlatformEventEventInvitationsRelation", fields: [platformEventId], references: [id])
+  platformEventId    String?            @db.ObjectId
+
+  platformEventSlot          PlatformEventSlot? @relation(fields: [platformEventSlotId], references: [id])
+  platformEventSlotId        String?            @db.ObjectId
+  platformEventPricingSlot   PlatformEventCart? @relation(name: "PlatformEventPricingSlotInvitation", fields: [platformEventPricingSlotId], references: [id])
+  platformEventPricingSlotId String?            @db.ObjectId
+}
+
+model EventRequestInvitation {
+  id          String        @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt   DateTime      @default(now()) @db.Date
+  event       PlatformEvent @relation("EventRequestInvitationRelation", fields: [eventId], references: [id])
+  eventId     String        @db.ObjectId
+  requester   user          @relation("EventRequestInvitationUser", fields: [requesterId], references: [id])
+  requesterId String        @db.ObjectId
+
+  requesterMembership   CompanyMembership? @relation("EventRequestInvitationCompanyMembership", fields: [requesterMembershipId], references: [id])
+  requesterMembershipId String?            @db.ObjectId
+  status                String             @default("AWAITING")
+  updatedAt             DateTime           @updatedAt @db.Date
+}
+
+model FamilyLinks {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model FamilyRelationship {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now()) @db.Date
+  isChild   Boolean?
+  status    String
+  type      String
+  updatedAt DateTime @updatedAt @db.Date
+
+  users RelationshipFamilyInfo[]
+}
+
+model LoginChallenge {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  challengeType String
+  code          String
+  createdAt     DateTime @default(now()) @db.Date
+  status        String?
+  updatedAt     DateTime @updatedAt @db.Date
+  user          user     @relation("UserLoginChallenge", fields: [userId], references: [id])
+  userId        String   @db.ObjectId
+
+  @@index([userId], map: "user_R")
+}
+
+model MarketingTopupService {
+  id               String                         @id @default(auto()) @map("_id") @db.ObjectId
+  description      String
+  name             String
+  title            String?
+  pricing          MarketingTopupServicePricing[]
+  userFriendlyName String
+}
+
+model MarketplaceArticle {
+  id           String  @id @default(auto()) @map("_id") @db.ObjectId
+  title        String
+  imageAddress String
+  price        Int?
+  currency     String  @default("GBP")
+  description  String
+  keywords     String?
+
+  postedBy   user?    @relation("UserMarketplaceArticle", fields: [postedById], references: [id])
+  postedById String?  @db.ObjectId
+  createdAt  DateTime @default(now()) @db.Date
+  updatedAt  DateTime @default(now()) @db.Date
+
+  pagePreviews MarketplaceArticlePagePreview[] @relation("MarketplaceArticleGetsPagePreviews")
+
+  comments          MarketplaceComment[]  @relation("CommentsToMarketplaceArticle")
+  cartItemsBacklink MarketplaceCartItem[] @relation("MarketplaceCartItems")
+
+  @@index([postedById], map: "postedBy_R")
+}
+
+model MarketplaceArticlePagePreview {
+  id                   String              @id @default(auto()) @map("_id") @db.ObjectId
+  imageAddress         String
+  isDesktopSize        Boolean
+  /// Field referred in an index, but found no data to define the type.
+  article              Json?
+  marketplaceArticle   MarketplaceArticle? @relation("MarketplaceArticleGetsPagePreviews", fields: [marketplaceArticleId], references: [id])
+  marketplaceArticleId String?             @db.ObjectId
+
+  @@index([article], map: "article_R")
+}
+
+model MarketplaceCart {
+  id                String    @id @default(auto()) @map("_id") @db.ObjectId
+  subtotal          Int
+  taxTotal          Int
+  totalPrice        Int
+  currency          String    @default("GBP")
+  paymentDate       DateTime?
+  /// Field referred in an index, but found no data to define the type.
+  postedByCompany   company?  @relation("CompanyPostedMarketplaceCart", fields: [postedByCompanyId], references: [id])
+  postedByCompanyId String?   @db.ObjectId
+  /// Field referred in an index, but found no data to define the type.
+  postedByUser      user?     @relation("UserPostedMarketplaceCart", fields: [postedByUserId], references: [id])
+  postedByUserId    String?   @db.ObjectId
+  createdAt         DateTime  @default(now()) @db.Date
+  updatedAt         DateTime  @default(now()) @db.Date
+
+  items MarketplaceCartItem[] @relation("MarketplaceCartItems")
+}
+
+model MarketplaceCartItem {
+  id        String              @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  itemCount Int
+  price     Int
+  tax       Int
+  currency  String              @default("GBP")
+  /// Field referred in an index, but found no data to define the type.
+  article   MarketplaceArticle? @relation("MarketplaceCartItems", fields: [articleId], references: [id])
+  articleId String?             @db.ObjectId
+
+  createdAt DateTime @default(now()) @db.Date
+  updatedAt DateTime @default(now()) @db.Date
+
+  cart   MarketplaceCart? @relation("MarketplaceCartItems", fields: [cartId], references: [id])
+  cartId String?          @db.ObjectId
+}
+
+model MarketplaceComment {
+  id         String              @id @default(auto()) @map("_id") @db.ObjectId
+  text       String
+  rateNumber Int
+  article    MarketplaceArticle? @relation("CommentsToMarketplaceArticle", fields: [articleId], references: [id])
+  articleId  String?             @db.ObjectId
+
+  dislikedBy user[] @relation("UserDislikesMarketplaceComments")
+  likedBy    user[] @relation("UserLikesMarketplaceComments")
+  reportedBy user[] @relation("UserReportedMarketplaceComments")
+
+  postedBy   user     @relation("UserPostedMarketplaceComments", fields: [postedById], references: [id])
+  postedById String   @db.ObjectId
+  createdAt  DateTime @default(now()) @db.Date
+  updatedAt  DateTime @default(now()) @db.Date
+}
+
+model MediaVerticalPublishers {
+  id              String         @id @default(auto()) @map("_id") @db.ObjectId
+  vertical        String
+  publisherSite   PublisherSite? @relation(fields: [publisherSiteId], references: [id])
+  publisherSiteId String?        @db.ObjectId
+  approvedBy      user?          @relation(fields: [approvedById], references: [id])
+  approvedById    String?        @db.ObjectId
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@map("MediaVerticalPublishers")
+}
+
+model PermissionsNew {
+  id          String             @id @default(auto()) @map("_id") @db.ObjectId
+  employeeId  String?            @db.ObjectId
+  employee    CompanyMembership? @relation("EmployeePermissions", fields: [employeeId], references: [id])
+  groupId     String?            @db.ObjectId
+  group       UserGroup?         @relation("UserGroupPermissions", fields: [groupId], references: [id])
+  permissions Json?
+  createdAt   DateTime           @default(now()) @db.Date
+  updatedAt   DateTime           @updatedAt @db.Date
+
+  @@map("PermissionsNew")
+}
+
+model PlatformEvent {
+  id                   String            @id @default(auto()) @map("_id") @db.ObjectId
+  archiveDate          DateTime?         @db.Date
+  attendee_preferences String[]
+  attendees            EventInvitation[] @relation("PlatformEventEventInvitationsRelation")
+
+  language String?
+
+  company_preferences String[]
+  contact_us          String?
+  contact_us_check    Boolean?
+  contents            PlatformEventContents[]
+  createdAt           DateTime                @default(now()) @db.Date
+  /// Field referred in an index, but found no data to define the type.
+  createdByUser       Json?
+
+  cluster       CrmCluster[] @relation("EventCluster")
+  customCluster CrmCluster[] @relation("EventClusterCustom")
+
+  description                            String?
+  description_check                      Boolean?
+  employees_filter                       String?
+  employees_filter_check                 Boolean?
+  endAt                                  DateTime?                 @db.Date
+  header_image                           String?
+  header_image_check                     Boolean?
+  id_number                              Int
+  left_image                             String?
+  left_image_check                       Boolean?
+  legal                                  String?
+  legal_check                            Boolean?
+  location                               String?
+  location_check                         Boolean?
+  logoURL                                String?
+  logo_image_check                       Boolean?
+  maximumAttendees                       Int                      @default(20)
+  menus                                  PlatformEventMenus[]
+  menusOrder                             String[]
+  name                                   String
+  name_check                             Boolean?
+  notificationStatus                     String?
+  organiser                              CompanyMembership        @relation("PlatformEventCompanyMembershipOrganiser", fields: [organiserId], references: [id])
+  organiserId                            String                   @db.ObjectId
+  platformEventType                      String
+  privacy                                String?
+  privacy_check                          Boolean?
+  qr_code_url                            String?
+  qr_code_url_check                      Boolean?
+  right_image                            String?
+  right_image_check                      Boolean?
+  slotDurationMins                       Int                      @default(30)
+  slug                                   String                   @unique(map: "slug_U")
+  startAt                                DateTime?                 @db.Date
+  status                                 String                   @default("DRAFT")
+  theme                                  PlatformEventTheme
+  timezone                               String?
+  timezoneLocation                       String?
+  updatedAt                              DateTime                 @updatedAt @db.Date
+  venues                                 PlatformEventVenue[]     @relation("EventRelatedToPlatformEvent")
+  your_data                              String?
+  your_data_check                        Boolean?
+  notes                                  String?
+  geo                                    String?
+  platformEventCartBacklink              PlatformEventCart[]
+  EventRequestInvitationRelationBacklink EventRequestInvitation[] @relation("EventRequestInvitationRelation")
+  timezone_check                         Boolean?
+
+  platformEventTransactionEventBacklink PlatformEventTransaction[] @relation("PlatformEventTransactionEventId")
+
+  platformEventSlotBacklink PlatformEventSlot[]   @relation("InvitationEventId")
+  platformEventMember       PlatformEventMember[] @relation("PlatformEventMemberId")
+
+  @@index([createdByUser], map: "createdByUser_R")
+}
+
+model PlatformEventCart {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  calanderSlotId  String?  @db.ObjectId
+  createdAt       DateTime @default(now()) @db.Date
+  currentCurrency String?
+  currentPrice    Float?
+
+  endAt           DateTime?         @db.Date
+  invitation      EventInvitation[] @relation("PlatformEventPricingSlotInvitation")
+  item            String
+  paymentIntentId String?
+
+  qrcodeImage String
+  qrcodeKey   String
+  quantity    Int
+  startAt     DateTime? @db.Date
+  status      String
+  type        String
+  updatedAt   DateTime  @updatedAt @db.Date
+
+  userCompanyMembership   CompanyMembership? @relation("UserCompanyMembership", fields: [userCompanyMembershipId], references: [id])
+  userCompanyMembershipId String?            @db.ObjectId
+
+  xeroId String?
+
+  event               PlatformEvent?     @relation(fields: [eventId], references: [id])
+  eventId             String?            @db.ObjectId
+  CompanyMembership   CompanyMembership? @relation(fields: [companyMembershipId], references: [id])
+  companyMembershipId String?            @db.ObjectId
+
+  employeeActionBy   CompanyMembership? @relation("EmployeeActor", fields: [employeeActionById], references: [id])
+  employeeActionById String?            @db.ObjectId
+
+  pricing   PlatformEventContentPricing? @relation(fields: [pricingId], references: [id])
+  pricingId String?                      @db.ObjectId
+
+  user   user?   @relation("PlatformEventCartUser", fields: [userId], references: [id])
+  userId String? @db.ObjectId
+
+  platformEventTransactionBacklink PlatformEventTransaction? @relation("PlatformEventTransactionCartId", fields: [platformEventTransactionId], references: [id])
+  platformEventTransactionId       String?                   @db.ObjectId
+
+  platformEventSlotBacklink PlatformEventSlot[] @relation("PlatformEventCartRelation")
+}
+
+model PlatformEventContentPricing {
+  id                        String              @id @default(auto()) @map("_id") @db.ObjectId
+  availability_hours        String[]
+  availability_weeks        String[]
+  booked_slots              Int?
+  currency                  String?
+  duration                  Int?
+  price                     Float?
+  show_rating               Boolean?
+  slots                     Int?
+  tax                       Int?
+  /// Field referred in an index, but found no data to define the type.
+  user                      Json?
+  user_type                 String?
+  remaining_slots           Int?
+  employee                  CompanyMembership[] @relation("PlatformEventContentPricingEmployee")
+  platformEventCartBacklink PlatformEventCart[]
+
+  platformEventContentBacklink PlatformEventContents? @relation("PlatformEventContentPricingContent", fields: [platformEventContentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  platformEventContentId       String?                @db.ObjectId
+
+  platformEventContentPricingMasterBacklink PlatformEventContents[] @relation("ContentPricingMaster")
+
+  @@index([user], map: "user_R")
+}
+
+model PlatformEventMember {
+  id              String             @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt       DateTime           @default(now()) @db.Date
+  platformEvent   PlatformEvent?     @relation("PlatformEventMemberId", fields: [platformEventId], references: [id])
+  platformEventId String?            @db.ObjectId
+  profile         CompanyMembership? @relation("PlateEventMembershipProfileId", fields: [profileId], references: [id])
+  profileId       String?            @db.ObjectId
+  role            String?
+  status          String
+  updatedAt       DateTime           @updatedAt @db.Date
+  user            user               @relation("PlatformEventMemberUser", fields: [userId], references: [id])
+  userId          String             @db.ObjectId
+
+  @@index([platformEventId], map: "platformEvent_R")
+  @@index([userId], map: "user_R")
+}
+
+model PlatformEventQRCodeScan {
+  id                    String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt             DateTime @default(now()) @db.Date
+  event                 String   @db.ObjectId
+  updatedAt             DateTime @updatedAt @db.Date
+  user                  String   @db.ObjectId
+  /// Field referred in an index, but found no data to define the type.
+  userCompanyMembership Json?
+
+  @@index([userCompanyMembership], map: "userCompanyMembership_R")
+  @@index([user], map: "user_R")
+  @@index([event], map: "event_R")
+}
+
+model PlatformEventSlot {
+  id             String             @id @default(auto()) @map("_id") @db.ObjectId
+  attendees      EventInvitation[]
+  calendarSlotId String?            @db.ObjectId
+  cart           PlatformEventCart? @relation("PlatformEventCartRelation", fields: [cartId], references: [id])
+
+  cartId      String?           @db.ObjectId
+  contentId   String?
+  createdAt   DateTime          @default(now()) @db.Date
+  endAt       DateTime          @db.Date
+  event       PlatformEvent?    @relation("InvitationEventId", fields: [eventId], references: [id])
+  eventId     String?           @db.ObjectId
+  name        String
+  organiser   CompanyMembership @relation(fields: [organiserId], references: [id])
+  organiserId String            @db.ObjectId
+  startAt     DateTime          @db.Date
+  updatedAt   DateTime          @updatedAt @db.Date
+
+  venue   PlatformEventVenue? @relation(name: "PlatformEventSlotVenue", fields: [venueId], references: [id])
+  venueId String?             @db.ObjectId
+
+  description String?
+
+  geo      String?
+  location String?
+
+  @@index([eventId], map: "event_R")
+  @@index([cartId], map: "cart_R")
+}
+
+model PlatformEventTransaction {
+  id        String              @id @default(auto()) @map("_id") @db.ObjectId
+  amount    Int
+  carts     PlatformEventCart[] @relation("PlatformEventTransactionCartId")
+  createdAt DateTime            @default(now()) @db.Date
+  currency  String
+
+  event   PlatformEvent? @relation("PlatformEventTransactionEventId", fields: [eventId], references: [id])
+  eventId String?        @db.ObjectId
+
+  refunded  Boolean?
+  status    String
+  stripeRaw String
+  txnId     String?
+  updatedAt DateTime @updatedAt @db.Date
+  user      user?    @relation("UserCartTransaction", fields: [userId], references: [id])
+  userId    String?  @db.ObjectId
+}
+
+model PlatformEventVenue {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt    DateTime @default(now()) @db.Date
+  link         String?
+  maxAttendees Int
+  name         String
+  status       String   @default("ACTIVE")
+  type         String?
+  updatedAt    DateTime @updatedAt @db.Date
+
+  platformEvent   PlatformEvent? @relation(name: "EventRelatedToPlatformEvent", fields: [platformEventId], references: [id])
+  platformEventId String?        @db.ObjectId
+
+  platformEventSlots PlatformEventSlot[] @relation(name: "PlatformEventSlotVenue")
+}
+
+model PlatformEventsMembers {
+  id            String @id @default(auto()) @map("_id") @db.ObjectId
+  /// Field referred in an index, but found no data to define the type.
+  platformEvent Json?
+  /// Field referred in an index, but found no data to define the type.
+  profile       Json?
+  /// Field referred in an index, but found no data to define the type.
+  user          Json?
+
+  @@index([profile], map: "profile_R")
+  @@index([user], map: "user_R")
+  @@index([platformEvent], map: "platformEvent_R")
+}
+
+model ProjectDomain {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  domain    String @unique(map: "domain_U")
+  projectID String
+}
+
+model RelationshipCompanyInfo {
+  id                    String              @id @default(auto()) @map("_id") @db.ObjectId
+  company               company             @relation("CompanyRelationships", fields: [companyId], references: [id])
+  companyId             String              @db.ObjectId
+  role                  String
+  users                 CompanyMembership[]
+  relationship          CompanyRelationship @relation("CompanyRelationshipCompanies", fields: [companyRelationshipId], references: [id])
+  companyRelationshipId String              @db.ObjectId
+
+  @@index([companyId], map: "company_R")
+}
+
+model RelationshipFamilyInfo {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  role  String
+  users user[] @relation("UserFamilyRelationships")
+
+  user   user   @relation("FamilyRelationships", fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  userId String @db.ObjectId
+
+  relationship         FamilyRelationship @relation(fields: [familyRelationshipId], references: [id])
+  familyRelationshipId String             @db.ObjectId
+}
+
+enum RelationshipPermissionsType {
+  CAMPAIGN
+}
+
+model RelationshipPermissions {
+  id             String                      @id @default(auto()) @map("_id") @db.ObjectId
+  relationshipId String?                     @db.ObjectId
+  relationship   CompanyRelationship?        @relation(fields: [relationshipId], references: [id])
+  type           RelationshipPermissionsType
+  campaignId     String?                     @db.ObjectId
+  campaign       Campaign?                   @relation(fields: [campaignId], references: [id])
+
+  @@map("RelationshipPermissions")
+}
+
+model Research {
+  id            String             @id @default(auto()) @map("_id") @db.ObjectId
+  campaign      String?            @map("Campaign") // Maps to the "Campaign" field
+  canvasId      String?            @map("CanvasId") // Maps to the "CanvasId" field
+  createdAt     DateTime           @map("CreatedAt") @db.Date // Maps to the "CreatedAt" field
+  createdByUser String?            @map("CreatedBy") // Maps to the "CreatedBy" field
+  language      String?            @map("Language") // Maps to the "Language" field
+  name          String?            @map("Name") // Maps to the "Name" field
+  questions     ResearchQuestion[] @relation("ResearchQuestions")
+  status        Int?               @map("Status") // Maps to the "Status" field
+  studyTarget   Int?               @map("StudyTarget") // Maps to the "StudyTarget" field
+  updatedAt     DateTime?          @updatedAt @db.Date
+  archiveDate   DateTime?          @db.Date
+  // bring this back when we convert research to gql ot link the relationship
+  // campaign      Campaign?          @relation(fields: [campaignId], references: [id])
+  Campaign      Campaign?          @relation(fields: [campaignId], references: [id])
+  campaignId    String?            @db.ObjectId
+
+  @@index([createdByUser], map: "createdByUser_R")
+  @@map("research") // Explicitly specify the collection name to avoid conflict with Research in db
+}
+
+model ResearchAnswer {
+  id                 String            @id @default(auto()) @map("_id") @db.ObjectId
+  answer             String
+  goToQuestion       ResearchQuestion? @relation("goToQuestionResearchAnswer", fields: [goToQuestionId], references: [id])
+  goToQuestionId     String?           @db.ObjectId
+  isCorrect          Boolean
+  order              Int
+  shortCaption       String
+  ResearchQuestion   ResearchQuestion? @relation(fields: [researchQuestionId], references: [id])
+  researchQuestionId String?           @db.ObjectId
+
+  @@index([goToQuestionId], map: "goToQuestion_R")
+}
+
+model ResearchQuestion {
+  id             String            @id @default(auto()) @map("_id") @db.ObjectId
+  active         Boolean
+  answerRequired Boolean
+  answers        ResearchAnswer[]
+  goToQuestion   ResearchQuestion? @relation("SelfReferenceResearchQuestion", fields: [goToQuestionId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  goToQuestionId   String? @db.ObjectId
+  order            Int
+  question         String
+  randomiseAnswers Boolean
+  shortCaption     String
+  textAreaHeight   Int
+  type             String
+
+  research                   Research?        @relation("ResearchQuestions", fields: [researchId], references: [id])
+  researchId                 String?          @db.ObjectId
+  goToQuestionResearchAnswer ResearchAnswer[] @relation("goToQuestionResearchAnswer")
+
+  referencedBy ResearchQuestion[] @relation("SelfReferenceResearchQuestion")
+}
+
+model StudioTemplate {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  projectId   String
+  content     String
+  description String?
+  companyId   String?
+  campaign    String?
+  format      String?
+  assets      String?
+  size        String?
+  isPublished Boolean?
+  price       String?
+  variation   String?
+  projectType String?
+  user        user?    @relation("UserStudioTemplate", fields: [userId], references: [id])
+  userId      String?  @map("user") @db.ObjectId
+  keywords    String[]
+  thumbnails  String[]
+  html        String[]
+
+  createdAt DateTime @default(now()) @db.Date
+  updatedAt DateTime @updatedAt @db.Date
+
+  @@index([userId], map: "user_R")
+}
+
+model SubscriptionBalances {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model SupportQuestion {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now()) @db.Date
+  hyperlink String?
+  keywords  String
+  likedBy   user[]   @relation("UserLikesSupportQuestions")
+
+  order           Int
+  postedBy        user?          @relation("UserPostedSupportQuestions", fields: [postedById], references: [id])
+  postedById      String?        @db.ObjectId
+  returningAnswer String
+  title           String
+  topic           String
+  updatedAt       DateTime       @updatedAt @db.Date
+  views           Int
+  replies         SupportReply[]
+}
+
+model SupportReply {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  answer    String
+  /// Field referred in an index, but found no data to define the type.
+  checkedBy Json?
+  createdAt DateTime @default(now()) @db.Date
+
+  hyperlink  String
+  likedBy    user[]          @relation("UserLikesSupportReplies")
+  dislikedBy user[]          @relation("UserDislikesSupportsReplies")
+  postedBy   user?           @relation("UserPostedSupportReplies", fields: [postedById], references: [id])
+  postedById String?         @db.ObjectId
+  question   SupportQuestion @relation(fields: [questionId], references: [id])
+  questionId String          @db.ObjectId
+  status     String
+  updatedAt  DateTime        @updatedAt @db.Date
+
+  @@index([checkedBy], map: "checkedBy_R")
+  @@index([questionId], map: "question_R")
+  @@index([postedById], map: "postedBy_R")
+}
+
+model SupportReplyRate {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now()) @db.Date
+  postedBy  String   @db.ObjectId
+  rate      Int
+  reply     String   @db.ObjectId
+
+  @@index([postedBy], map: "postedBy_R")
+  @@index([reply], map: "reply_R")
+}
+
+model TopupsBalances {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model UpdateChallenge {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  challengeType   String
+  code            String
+  createdAt       DateTime @default(now()) @db.Date
+  status          String?
+  unverifiedEmail String?
+  unverifiedPhone String?
+  updatedAt       DateTime @updatedAt @db.Date
+  userId          String   @db.ObjectId
+  user            user     @relation(fields: [userId], references: [id])
+}
+
+model UserFeedback {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  crm    Json?
+  user   user   @relation(fields: [userId], references: [id])
+  userId String @db.ObjectId
+
+  feedback String?
+
+  createdAt DateTime @default(now()) @db.Date
+  updatedAt DateTime @updatedAt @db.Date
+
+  @@index([userId], map: "user_R")
+  @@index([crm], map: "crm_R")
+}
+
+model UserMarketingPreference {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  companyId   String  @db.ObjectId // Foreign key to Company
+  company     company @relation(fields: [companyId], references: [id]) // Relation to Company
+  preferences Json
+  userId      String  @db.ObjectId // Foreign key to User
+  user        user    @relation(fields: [userId], references: [id]) // Relation to User
+
+  @@index([companyId], map: "company_R") // Index for companyId
+  @@index([userId], map: "user_R") // Index for userId
+}
+
+model advertiser {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  Company   Int?
+  name      String  @map("Name")
+  companyId String  @db.ObjectId // Foreign key to Company
+  company   company @relation(fields: [companyId], references: [id], name: "AdvertiserCompany")
+}
+
+model agenda_tasks {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  /// Field referred in an index, but found no data to define the type.
+  disabled  Json?
+  /// Field referred in an index, but found no data to define the type.
+  lockedAt  Json?
+  /// Field referred in an index, but found no data to define the type.
+  name      Json?
+  /// Field referred in an index, but found no data to define the type.
+  nextRunAt Json?
+  /// Field referred in an index, but found no data to define the type.
+  priority  Json?
+
+  @@index([name, nextRunAt, priority(sort: Desc), lockedAt, disabled], map: "findAndLockNextJobIndex")
+}
+
+model BillingLedger {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  company   company @relation("CompanyBillingLedgers", fields: [companyId], references: [id])
+  companyId String  @db.ObjectId
+
+  amount             Int
+  description        String
+  invoiceID          String?
+  service            String?
+  campaign           String?
+  timestamp          DateTime @db.Date
+  type               String
+  notificationStatus String?  @default("UNREAD")
+  user               user?    @relation("UserToLedger", fields: [userId], references: [id])
+  userId             String?  @db.ObjectId
+
+  @@index([userId], map: "user_R")
+  @@index([companyId], map: "company_R")
+}
+
+model PaymentCard {
+  id        String                    @id @default(auto()) @map("_id") @db.ObjectId
+  company   company                   @relation(fields: [companyId], references: [id], name: "PaymentCardCompany")
+  companyId String                    @db.ObjectId
+  holder    String                    @map("Holder")
+  currency  String                    @map("Currency")
+  address   BillingAddress?
+  status    String                    @map("CardStatus")
+  stripe    BillingPaymentCardStripe?
+
+  @@map("billing_payment_card") // Maps the model to the specified table name
+}
+
+model brand {
+  id   String @id @default(auto()) @map("_id") @db.ObjectId
+  name String @map("Name")
+
+  advertiser   company @relation(fields: [advertiserId], references: [id], name: "BrandAdvertiser")
+  advertiserId String  @db.ObjectId // Foreign key to Company (Advertiser)
+
+  client   company @relation(fields: [clientId], references: [id], name: "BrandClient")
+  clientId String  @db.ObjectId // Foreign key to Company (Client)
+
+  campaignBrandBacklink Campaign[] @relation("CampaignBrand")
+}
+
+model Campaign {
+  id                     String @id @default(auto()) @map("_id") @db.ObjectId
+  budget                 Int    @map("Budget")
+  crmClustersAtCreation  Int?
+  crmQuestionsAtCreation Int?
+  crmUsersAtCreation     Int?
+  currency               String @map("Currency")
+  name                   String @map("Name")
+  status                 Int    @map("Status")
+
+  archiveDate DateTime? @db.Date
+  createdAt   DateTime  @default(now()) @db.Date
+
+  idIncrement        Int
+  reportingCacheTill DateTime? @db.Date
+  updatedAt          DateTime  @updatedAt @db.Date
+
+  updatedByUser   user?   @relation("CampaignUserUpdated", fields: [updatedByUserId], references: [id])
+  updatedByUserId String? @db.ObjectId
+
+  createdByUser   user   @relation("CampaignUserCreated", fields: [createdByUserId], references: [id])
+  createdByUserId String @db.ObjectId
+
+  channelPermissions      ChannelPermissions[]      @relation("ChannelPermissionCampaign") // Inverse relation
+  Research                Research[]
+  RelationshipPermissions RelationshipPermissions[]
+
+  client   company @relation("CampaignClient", fields: [clientId], references: [id])
+  clientId String  @db.ObjectId
+
+  advertiser   company @relation("CampaignAdvertiser", fields: [advertiserId], references: [id])
+  advertiserId String  @db.ObjectId
+
+  brand         brand  @relation("CampaignBrand", fields: [brandId], references: [id])
+  brandId       String @db.ObjectId
+  archiveMethod Int?
+
+  bookingAmount   Int?
+  category        Int?
+  channel         Int?
+  channelsCreated Int?
+  country         Int?
+  end             DateTime? @db.Date
+  start           DateTime? @db.Date
+  percentage      Int?
+  spend           Int?
+
+  @@index([updatedByUserId], map: "updatedByUser_R")
+  @@index([createdByUserId], map: "createdByUser_R")
+  @@map("campaign")
+}
+
+model code {
+  id               String          @id @default(auto()) @map("_id") @db.ObjectId
+  archiveDate      DateTime?       @db.Date
+  campaign         String?         @map("Campaign")
+  createdAt        DateTime?       @default(now()) @db.Date
+  createdByCompany Int?
+  createdByUser    String?
+  createdByUserId  Int?
+  defaultURL       String?         @map("DefaultURL")
+  name             String          @map("Name")
+  status           Int             @map("Status")
+  targeting        CodeTargeting[]
+  targetingType    Int?
+  updatedAt        DateTime?       @updatedAt @db.Date
+  idRaw            String?         @map("_idRaw")
+  id_number        Int
+}
+
+model code_sessions {
+  id            String             @id @default(auto()) @map("_id") @db.ObjectId
+  Campaign      Int
+  CodeID        String
+  Created       DateTime           @db.Date
+  Device        CodeSessionsDevice
+  Fingerprint   String?
+  Geo           CodeSessionsGeo
+  IP            String
+  URL           String
+  UserAgent     String?
+  UserSessionID String?
+}
+
+model collection_indexes {
+  id         String @id @default(auto()) @map("_id") @db.ObjectId
+  collection String
+  index      Int
+}
+
+model company {
+  id                    String          @id @default(auto()) @map("_id") @db.ObjectId
+  accountCreatedOn      DateTime?       @default(now()) @map("AccountCreatedOn")
+  accountExpirationDate DateTime?       @map("AccountExpirationDate")
+  agendaTasks           Json?           @map("AgendaTasks")
+  billingEmail          String?         @map("billingEmail")
+  canDoRotationalTags   Boolean?        @default(false) @map("CanDoRotationalTags")
+  canDoScriptTracking   Boolean?        @default(false) @map("CanDoScriptTracking")
+  canGenerateTags       Json?           @map("CanGenerateTags")
+  info                  String?         @map("Company Info")
+  regNum                String?         @map("Company Registration Number")
+  vatNum                String?         @map("Company Sales VAT Number")
+  contactEmail          String?         @map("ContactEmail")
+  currency              String?         @default("USD") @map("Currency")
+  enabled               Int             @default(1) @map("Enabled")
+  externalIDs           Json?           @map("ExternalIDs")
+  linkedCompanies       Json?           @map("LinkedCompanies")
+  name                  String?         @unique(map: "Name_U") @map("name")
+  nextPaymentDate       DateTime?       @map("NextPaymentDate")
+  onCredit              Json?           @map("OnCredit")
+  promoCode             Json?           @map("PromoCode")
+  publisherKey          String          @map("PublisherKey")
+  subscriptionPlanType  Json?           @map("SubscriptionPlanType")
+  type                  Int             @map("Type")
+  url                   String?         @map("URL")
+  uniqueKey             String?         @map("UniqueKey")
+  vatNumber             Json?           @map("VATNumber")
+  vatExempt             Json?           @map("VATexempt")
+  address               GenericAddress?
+  bankAccount           BankAccount?    @relation(fields: [bankAccountId], references: [id])
+  // billingContact             CompanyMembership?
+
+  billingContact   CompanyMembership? @relation("BillingContact", fields: [billingContactId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  billingContactId String?            @map("billingContact") @db.ObjectId
+
+  refferedTier               String?
+  refferedTotal              String?
+  billingPhone               String?
+  billingReferralId          String?                   @map("billingReferral") @db.ObjectId
+  billingReferral            BillingCoupon?            @relation("ReferralCode", fields: [billingReferralId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  businessType               String?
+  category                   String?
+  contactXeroId              String?
+  createdAt                  DateTime                  @default(now()) @map("createdAt") @db.Date
+  directorContact            Json?
+  email                      String?                   @map("email")
+  employeeCanAccessMarketing CompanyMembership[]       @relation("EmployeeCanAccessMarketing")
+  executiveContact           Json?
+  landline                   String?
+  logoURL                    String?
+  masterContact              CompanyMembership?        @relation("MasterContact", fields: [masterContactId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  masterContactId            String?                   @map("masterContact") @db.ObjectId
+  members                    CompanyMembership[]       @relation("CompanyMembership")
+  ownersContact              Json?
+  profiles                   CompanyProfiles[]
+  redeemedCoupons            Json?
+  relationshipRequestKey     String?
+  representativeContact      CompanyMembership?        @relation("Representative", fields: [representativeContactId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  representativeContactId    String?                   @db.ObjectId
+  stripeAccountId            String?
+  stripeCustomerId           String?
+  subscriptions              String[]                  @default([])
+  tos_acceptance             CompanyTosAcceptance?
+  updatedAt                  DateTime                  @updatedAt @db.Date
+  users                      user[]
+  UserMarketingPreference    UserMarketingPreference[]
+  crmUser                    CrmUser[]                 @relation("CrmUserToCompany")
+  user_groups                UserGroup[]
+  status                     String?                   @map("Status")
+  isPrepaid                  Boolean?
+
+  advertiserBrands brand[]      @relation(name: "BrandAdvertiser") // A company can be an advertiser for multiple brands
+  clientBrands     brand[]      @relation(name: "BrandClient") // A company can be a client for multiple brands
+  advertisers      advertiser[] @relation(name: "AdvertiserCompany")
+
+  relationships RelationshipCompanyInfo[] @relation("CompanyRelationships")
+  crmClusters   CrmCluster[]              @relation("CompanyCrmClusters")
+
+  billingDefaultType String?
+
+  business_type      String?
+  bankAccountId      String?              @db.ObjectId
+  CompanyEmailDomain CompanyEmailDomain[]
+
+  campaignClientBacklink     Campaign[] @relation("CampaignClient")
+  campaignAdvertiserBacklink Campaign[] @relation("CampaignAdvertiser")
+
+  companyPostedMarketplaceCartBacklink MarketplaceCart[] @relation("CompanyPostedMarketplaceCart")
+  companyDomainsBacklink               CompanyDomain[]
+  userSessions                         UserSession[]
+
+  crmQuestionToCompanyBacklink CrmQuestion[] @relation("CrmQuestionToCompany")
+
+  permittedCoupons   BillingCoupon[] @relation("CouponPermittedCompany", fields: [permittedCouponsId], references: [id])
+  permittedCouponsId String[]        @db.ObjectId
+
+  billingInvoices BillingInvoice[] @relation("CompanyBillingInvoices")
+
+  billingLedgers BillingLedger[] @relation("CompanyBillingLedgers")
+
+  paymentCardCompanyBacklink PaymentCard[] @relation("PaymentCardCompany")
+
+  @@index([billingReferralId], map: "billingReferral_R")
+  @@index([directorContact], map: "directorContact_R")
+  @@index([ownersContact], map: "ownersContact_R")
+  @@index([billingContactId], map: "billingContact_R")
+  @@index([masterContactId], map: "masterContact_R")
+  @@index([executiveContact], map: "executiveContact_R")
+  @@index([redeemedCoupons], map: "redeemedCoupons_R")
+}
+
+model crm_cluster {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  CompanyId         Int
+  ConsumerIDs       String[]
+  CreatedBy         Int
+  CreationDate      DateTime @db.Date
+  Description       String
+  FilterDescription String
+  FilterSQL         String
+  IsDefault         Boolean
+  IsSystem          Boolean
+  IsTemporary       Boolean
+  LastUpdated       DateTime @db.Date
+  Name              String
+  RecordCount       Int
+  Status            String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Type              Json?
+}
+
+model crm_consumer {
+  id             String                 @id @default(auto()) @map("_id") @db.ObjectId
+  CompanyId      Int
+  ContactInfo    CrmConsumerContactInfo
+  Data           CrmConsumerData[]
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  DateOfBirth    Json?
+  Firstname      String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Gender         Json?
+  Home           CrmConsumerHome
+  Lastname       String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  ManuallyEdited Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Password       Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Status         Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Subscriptions  Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Title          Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  URL            Json?
+  Work           CrmConsumerWork
+}
+
+model crm_question_session {
+  id          String                   @id @default(auto()) @map("_id") @db.ObjectId
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Answers     Json?
+  Campaign    Int
+  Consumer    String                   @db.ObjectId
+  Created     DateTime                 @db.Date
+  Device      CrmQuestionSessionDevice
+  Geo         CrmQuestionSessionGeo
+  IP          String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  QuestionSet Json?
+  SessionID   String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Source      Json?
+  UA          String
+}
+
+model crm_selected {
+  id        String            @id @default(auto()) @map("_id") @db.ObjectId
+  CompanyId Int
+  Rows      CrmSelectedRows[]
+  UserId    Int
+}
+
+model currency {
+  id          String @id @map("_id")
+  Common      String
+  CommonOrder String
+  IntID       Int
+  Name        String
+  Symbol      String
+  SymbolHTML  String
+}
+
+model BillingInvoice {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  company   company? @relation("CompanyBillingInvoices", fields: [companyId], references: [id])
+  companyId String?  @db.ObjectId
+
+  dueDate   DateTime      @db.Date
+  gross     Int
+  issueDate DateTime      @map("IssueDate") @db.Date
+  LineItems BillingItem[]
+  net       Int?
+  status    String?
+  xeroID    String?
+
+  paymentRefs Json?
+  extra       Json?
+
+  @@index([companyId], map: "company_R")
+}
+
+model democrm {
+  id                String             @id @default(auto()) @map("_id") @db.ObjectId
+  associatedCompany String?            @db.ObjectId
+  companies         DemocrmCompanies[]
+}
+
+model LegacyStudioProject {
+  id                  String    @id @default(auto()) @map("_id") @db.ObjectId
+  Campaign            String?
+  Title               String?
+  content             String?
+  html                String?
+  comments            String?
+  size                String?
+  ProjectType         Int?
+  crossDeviceURL      String?
+  smartphoneProjectID String?
+  tabletProjectID     String?
+  desktopProjectID    String?
+  status              Int?
+  user                String?   @db.ObjectId
+  createdAt           DateTime? @default(now()) @db.Date
+  updatedAt           DateTime? @updatedAt @db.Date
+  isPublished         Boolean?
+
+  @@map("legacy_studio") // Specify the table name in the database to match api-fenix
+}
+
+model LegacyStudioToken {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  key           String   @unique
+  projectId     Int
+  timeGenerated DateTime @db.Date
+  user          String?  @db.ObjectId
+
+  @@map("legacy_studio_token") // Specify the table name in the database to match api-fenix
+}
+
+model MailBatch {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  id_number Int?
+  name      String  @map("Name")
+  status    Int     @map("Status")
+  campaign  String? @map("Campaign") @db.ObjectId // This should be correctly mapped
+
+  @@map("mail_batch") // Ensure this maps to the correct collection/table
+}
+
+model mailing_session {
+  id        String                  @id @default(auto()) @map("_id") @db.ObjectId
+  Batch     String                  @db.ObjectId
+  Campaign  Int
+  Created   DateTime                @db.Date
+  Events    MailingSessionEvents[]
+  Recipient MailingSessionRecipient
+}
+
+model mailing_unsubscribed {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  Company        Int
+  Email          String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Phone          Json?
+  UnsubscribedOn DateTime @db.Date
+}
+
+model MediaCreative {
+  id         String                @id @default(auto()) @map("_id") @db.ObjectId
+  Assets     MediaCreativeAssets[]
+  CTA        String
+  CTAI       String[]
+  Campaign   Int
+  Format     String?
+  Imp        String[]
+  Name       String
+  ScriptTags String?
+  Type       Int
+}
+
+model media_events {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  Campaign Int?
+  Event    String
+}
+
+model MediaFlight {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  archiveDate     DateTime? @db.Date
+  /// Multiple data types found: Float: 84.7%, Int: 15.3% out of 1000 sampled entries
+  budgetClient    Json
+  campaign        String?   @map("Campaign") @db.ObjectId
+  /// Multiple data types found: String: 14.3%, Array(String): 85.7% out of 1000 sampled entries
+  city            Json?
+  country         String
+  createdAt       DateTime  @default(now()) @db.Date
+  createdByStudio Boolean
+  createdByUser   String
+  currency        String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  dateLocked      Json?
+  device          String?
+  endDate         DateTime? @db.Date
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  FXLocked        Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  FXRate          Json?
+  format          String?
+  formatSize      String?
+  frequencyCap    Int?
+  frequencyLength Int?
+
+  LinkedCreatives String[]
+
+  name               String
+  notes              String
+  OS                 String[]
+  placement          String
+  PricingModel       String?
+  /// Multiple data types found: Float: 15.3%, Int: 84.7% out of 1000 sampled entries
+  publisher          Json
+  publisherPaid      Boolean
+  publisherSite      String?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  RateClientFee      Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  RatePublisherFee   Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  RatePublisherGross Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  RatePublisherNet   Json?
+  /// Multiple data types found: String: 2.1%, DateTime (Date): 97.9% out of 1000 sampled entries
+  Start              Json
+  Status             Int
+  /// Multiple data types found: String: 99.9%, Int: 0.1% out of 1000 sampled entries
+  StudioId           Json?
+  TargetCountry      String?
+  UpdatedAt          DateTime @updatedAt @db.Date
+  Vertical           String?
+  Volume             String
+  Zone               String
+  gender             String[]
+  id_number          Int
+  keywords           String[]
+  maxAge             Int
+  minAge             Int
+  /// Field referred in an index, but found no data to define the type.
+  updatedByUser      Json?
+
+  @@index([updatedByUser], map: "updatedByUser_R")
+  @@index([createdByUser], map: "createdByUser_R")
+  @@map("media_flights")
+}
+
+model media_format {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  ExecuteCode String
+  Format      String
+  /// Multiple data types found: Int: 95.8%, BigInt: 4.2% out of 24 sampled entries
+  FormatID    Json
+  Version     String
+}
+
+model media_geodata {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  /// Field referred in an index, but found no data to define the type.
+  City    Json?
+  /// Field referred in an index, but found no data to define the type.
+  Country Json?
+  /// Field referred in an index, but found no data to define the type.
+  from    Json?
+  /// Field referred in an index, but found no data to define the type.
+  to      Json?
+
+  @@index([from(sort: Desc), to(sort: Desc)], map: "iprange")
+  @@index([City], map: "CityIndex")
+  @@index([Country], map: "CountryIndex")
+  @@index([Country, City], map: "CountryCityIndex")
+  @@index([to, from], map: "to_1_from_1")
+}
+
+model media_macro {
+  id              String  @id @map("_id")
+  Cachebuster     String
+  ClickImpression String
+  Impression      String?
+  Name            String
+}
+
+model media_margins {
+  id                  String                            @id @default(auto()) @map("_id") @db.ObjectId
+  Client              Int
+  ClientRelationships MediaMarginsClientRelationships[]
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Country             Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Currency            Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Device              Json?
+  DiscountPercentage  String
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Format              Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  FormatSize          Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Placement           Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  PricingModel        Json?
+  Publisher           Int
+  Relationships       MediaMarginsRelationships[]
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Vertical            Json?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Zone                Json?
+}
+
+model MediaRates {
+  id              String         @id @default(auto()) @map("_id") @db.ObjectId
+  averageVolume   Int
+  country         String?
+  currency        String
+  device          String
+  format          String
+  formatSize      String
+  /// Multiple data types found: Float: 28.8%, Int: 71.2% out of 1000 sampled entries
+  InitialPubRate  Json
+  placement       String?
+  pricingModel    String
+  publisher       Int
+  /// Multiple data types found: Float: 73.9%, Int: 26.1% out of 1000 sampled entries
+  publisherRate   Float
+  vertical        String?
+  zone            String
+  publisherSite   PublisherSite? @relation(fields: [publisherSiteId], references: [id])
+  publisherSiteId String?        @db.ObjectId
+
+  @@index([publisherSiteId], map: "publisherSite_R")
+}
+
+model media_session {
+  id                String                 @id @default(auto()) @map("_id") @db.ObjectId
+  Campaign          Int
+  Created           DateTime               @db.Date
+  Creative          String                 @db.ObjectId
+  Device            MediaSessionDevice
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  DwellTime         Json?
+  Events            MediaSessionEvents[]
+  Fingerprint       String
+  Flight            String                 @db.ObjectId
+  Geo               MediaSessionGeo
+  IP                String?
+  /// Nested objects had no data in the sample dataset to introspect a nested type.
+  Observations      Json
+  OriginatingSource String
+  ServedTag         Int
+  SessionID         String
+  Source            String
+  SynkdUser         MediaSessionSynkdUser?
+  Tag               Int
+  UA                String
+  URL               String
+  ViewableState     Int
+  Zone              String
+}
+
+model media_session_mapping {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model MediaTag {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  CTA           String?
+  CTAI          String[]
+  Campaign      Int?
+  Creative      String?  @db.ObjectId
+  Flight        String?  @db.ObjectId
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  FormatOptions Json?
+  FormatVersion String?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Iframe        Json?
+  Imp           String[]
+  Key           String
+  MRAID         Boolean?
+  MRAIDFix      String?
+  RotationalTag Boolean
+  ScriptTags    String?
+  Tag           Int
+  Zone          String?
+
+  @@index([Creative], map: "Creative_R")
+  @@index([Flight], map: "Flight_R")
+}
+
+model newsletter_url {
+  /// Multiple data types found: String: 0.5%, String (ObjectId): 99.5% out of 190 sampled entries
+  id    Json    @id @map("_id")
+  ID    String?
+  Label String
+  URL   String
+}
+
+model permissions {
+  id       String   @id @default(auto()) @map("_id") @db.ObjectId
+  Campaign Int
+  Group    String?  @db.ObjectId
+  Item     String
+  Perms    String[]
+  Scope    String
+  User     Int?
+  /// Field referred in an index, but found no data to define the type.
+  user     Json?
+
+  @@index([user], map: "user_R")
+  @@index([Group], map: "Group_R")
+}
+
+model user {
+  id                       String                    @id @map("_id") @db.ObjectId
+  zip                      String?
+  dob                      DateTime?                 @map("BirthDate") @db.Date
+  address                  GenericAddress?           @map("Address")
+  city                     String?                   @map("City")
+  companyId                String?                   @map("Company") @db.ObjectId
+  company                  company?                  @relation(fields: [companyId], references: [id])
+  country                  String?                   @map("Country")
+  dateFormatString         Json?
+  email                    String?                   @unique(map: "Email_U") @map("Email")
+  enable                   Int?                      @default(1) @map("Enable")
+  enabled                  Boolean                   @default(true) @map("Enabled")
+  password                 String?                   @map("FenixPassword")
+  fenixUserGroupId         String?                   @map("FenixUserGroup") @db.ObjectId
+  fenixUserGroup           UserGroup?                @relation(fields: [fenixUserGroupId], references: [id])
+  gender                   UserGender?
+  lastActivity             DateTime?                 @map("LastLogin") @db.Date
+  mobile                   Json?
+  firstName                String?                   @map("Name")
+  phone                    String?
+  publicKey                Json?
+  receiveNotifications     Json?
+  region                   Json?
+  salutation               Json?
+  lastName                 String?                   @map("Surname")
+  timeZoneID               Json?
+  avatar                   String?
+  companies                CompanyMembership[]       @relation(name: "UserToCompanies")
+  companyLimit             Int?
+  createdAt                DateTime                  @default(now()) @db.Date
+  deliveryAddress          GenericAddress?
+  doNotShowWalkthrough     Boolean?
+  emailVerified            Boolean                   @default(false)
+  facebook                 String?
+  instagram                String?
+  inviteUsed               Boolean                   @default(false)
+  isChild                  Boolean?
+  linkedIn                 String?
+  nationalSecurityNumber   String?
+  passportNumber           String?
+  phoneVerified            Boolean                   @default(false)
+  profiles                 UserProfiles[]
+  qq                       String?
+  redeemedCoupons          BillingCoupon[]
+  secondaryProfilePic      String?
+  skype                    String?
+  socialLine               String?
+  synkdDataSellAllowed     Boolean?
+  synkdDataSellAllowedDate DateTime?                 @db.Date
+  twitter                  String?
+  updatedAt                DateTime                  @updatedAt @db.Date
+  userProfileLockedUntil   DateTime?                 @db.Date
+  walkthroughStep          Int?
+  weChat                   String?
+  weibo                    String?
+  notifications            CommunityNotification[]   @relation(name: "UserReceivedNotification")
+  user_groupsId            String?                   @db.ObjectId
+  user_sessions            UserSession[]
+  UserMarketingPreference  UserMarketingPreference[]
+  crmUser                  CrmUser[]                 @relation("CrmUserToUser")
+  relationships            RelationshipFamilyInfo[]  @relation("FamilyRelationships")
+
+  userFamilyRelationship RelationshipFamilyInfo? @relation("UserFamilyRelationships", fields: [userFamilyRelationshipId], references: [id])
+
+  userFamilyRelationshipId String? @db.ObjectId // Foreign key to RelationshipFamilyInfo (UserFamilyRelationship)
+
+  userLoginChallenge      LoginChallenge[]      @relation("UserLoginChallenge")
+  platformEventMembership PlatformEventMember[] @relation("PlatformEventMemberUser")
+
+  communityQuestionPostedByBacklink  CommunityQuestion[] @relation("UserPostedCommunityQuestions")
+  communityQuestionCheckedByBacklink CommunityQuestion[] @relation("UserCheckedCommunityQuestions")
+
+  communityQuestionLikedByBacklink   CommunityQuestion?        @relation("UserLikesCommunityQuestions", fields: [communityQuestionLikedByBacklinkId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  communityQuestionLikedByBacklinkId String?                   @db.ObjectId
+  updateChallenge                    UpdateChallenge[]
+  PlatformEventCart                  PlatformEventCart[]       @relation("PlatformEventCartUser")
+  MediaVerticalPublishers            MediaVerticalPublishers[]
+
+  userPostedSupportQuestionsBacklink SupportQuestion[] @relation("UserPostedSupportQuestions")
+  userLikesSupportQuestion           SupportQuestion?  @relation("UserLikesSupportQuestions", fields: [userLikesSupportQuestionId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  userLikesSupportQuestionId         String?           @db.ObjectId
+
+  userPostedSupportReplyBacklink SupportReply[] @relation("UserPostedSupportReplies")
+  userLikesSupportsReplies       SupportReply?  @relation("UserLikesSupportReplies", fields: [userLikesSupportsRepliesId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  userLikesSupportsRepliesId     String?        @db.ObjectId
+  userDislikesSupportsReplies    SupportReply?  @relation("UserDislikesSupportsReplies", fields: [userDislikesSupportsRepliesId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  userDislikesSupportsRepliesId  String?        @db.ObjectId
+
+  UserMarketplaceArticleBacklink MarketplaceArticle[] @relation("UserMarketplaceArticle")
+
+  userDislikesMarketplaceCommentsBacklink MarketplaceComment? @relation("UserDislikesMarketplaceComments", fields: [userDislikesMarketplaceCommentsId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  userDislikesMarketplaceCommentsId       String?             @db.ObjectId
+
+  userLikesMarketplaceCommentsBacklink MarketplaceComment? @relation("UserLikesMarketplaceComments", fields: [userLikesMarketplaceCommentsId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  userLikesMarketplaceCommentsId       String?             @db.ObjectId
+
+  userReportedMarketplaceCommentsBacklink MarketplaceComment? @relation("UserReportedMarketplaceComments", fields: [userReportedMarketplaceCommentsId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  userReportedMarketplaceCommentsId       String?             @db.ObjectId
+
+  userPostedMarketplaceCommentsBacklink MarketplaceComment[] @relation("UserPostedMarketplaceComments")
+
+  userPostedMarketplaceCartBacklink MarketplaceCart[] @relation("UserPostedMarketplaceCart")
+
+  userLikesCommunitiesReplies   CommunityReply? @relation("UserLikesCommunitiesReplies", fields: [userLikesCommunitiesRepliesId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  userLikesCommunitiesRepliesId String?         @db.ObjectId
+
+  userDislikesCommunitiesReplies   CommunityReply? @relation("UserDislikesCommunitiesReplies", fields: [userDislikesCommunitiesRepliesId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  userDislikesCommunitiesRepliesId String?         @db.ObjectId
+
+  userReportedCommunitiesReplies   CommunityReply? @relation("UserReportedCommunitiesReplies", fields: [userReportedCommunitiesRepliesId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  userReportedCommunitiesRepliesId String?         @db.ObjectId
+
+  userPostedCommunitiesRepliesBacklink  CommunityReply[] @relation("UserPostedCommunityReply")
+  userCheckedCommunitiesRepliesBacklink CommunityReply[] @relation("UserCheckedCommunityReply")
+
+  userPostedCommunityReplyRateBacklink CommunityReplyRate[] @relation("UserPostedCommunityReplyRate")
+
+  platformEventMenuRelations PlatformEventMenuUser[]
+
+  userVisiblePlatformEventMenusId String? @db.ObjectId
+
+  eventRequestInvitationUserBacklink EventRequestInvitation[] @relation("EventRequestInvitationUser")
+
+  platformEventTransactionUserBacklink PlatformEventTransaction[] @relation("UserCartTransaction")
+
+  userFeedbackBacklink UserFeedback[]
+
+  crmQuestionResponseToUserBacklink CrmQuestionResponse[] @relation("CrmQuestionResponseToUser")
+
+  campaignUserUpdatedBacklink Campaign[] @relation("CampaignUserUpdated")
+
+  campaignUserCreatedBacklink Campaign[] @relation("CampaignUserCreated")
+
+  permittedCoupons   BillingCoupon[] @relation("CouponPermittedUser", fields: [permittedCouponsId], references: [id])
+  permittedCouponsId String[]        @db.ObjectId
+
+  usedCoupons    BillingCoupon[] @relation("CouponUsedByUser", fields: [usedCouponsIds], references: [id])
+  usedCouponsIds String[]        @db.ObjectId
+
+  userToLedgerBacklink   BillingLedger[]  @relation("UserToLedger")
+  studioTemplateBacklink StudioTemplate[] @relation("UserStudioTemplate")
+
+  UserCouponCreated UserCouponCreated[] @relation("UserCoupons")
+}
+
+model UserGroup {
+  id                String              @id @default(auto()) @map("_id") @db.ObjectId
+  name              String              @map("Name")
+  companyId         String              @db.ObjectId
+  company           company             @relation(fields: [companyId], references: [id])
+  permissions       PermissionsNew[]    @relation("UserGroupPermissions")
+  role              String
+  users             user[]
+  CompanyMembership CompanyMembership[]
+
+  @@map("user_groups")
+}
+
+model UserCouponCreated {
+  userId          String @db.ObjectId
+  billingCouponId String @db.ObjectId
+
+  user   user          @relation("UserCoupons", fields: [userId], references: [id])
+  coupon BillingCoupon @relation("CouponUsers", fields: [billingCouponId], references: [id])
+
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  @@unique([userId, billingCouponId]) // Unique constraint
+}
+
+model UserSession {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  SessionID String   @unique
+  company   company? @relation(fields: [companyId], references: [id])
+  companyId String?  @db.ObjectId
+  createdAt DateTime @default(now()) @db.Date
+  ipAddress String
+  updatedAt DateTime @updatedAt @db.Date
+  userAgent String?
+  userId    String   @db.ObjectId
+  user      user?    @relation(fields: [userId], references: [id])
+}
+
+model PublisherSite {
+  id                      String                    @id @default(auto()) @map("_id") @db.ObjectId
+  company                 String?                   @db.ObjectId
+  countries               String[]
+  Devices                 PublisherSiteDevices
+  name                    String                    @unique(map: "Name_U")
+  publisherCountry        String?
+  studio                  Boolean?
+  vertical                String?                   @map("Vertical")
+  zones                   String[]
+  archiveDate             DateTime?                 @db.Date
+  createdAt               DateTime?                 @default(now()) @db.Date
+  displayInSiteList       Boolean?
+  status                  String
+  updatedAt               DateTime?                 @db.Date
+  mediaVerticalPublishers MediaVerticalPublishers[]
+  MediaRates              MediaRates[]
+
+  @@map("publisher_site")
+}
+
+model publisher_tag {
+  id                      String                                @id @default(auto()) @map("_id") @db.ObjectId
+  AssignedCreativeFlights PublisherTagAssignedCreativeFlights[]
+  Company                 Int
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Countries               Json?
+  CreativeTags            PublisherTagCreativeTags[]
+  Device                  String
+  FlightIDs               String[]
+  Formats                 String[]
+  MediaTag                Int
+  Name                    String
+  Site                    String                                @db.ObjectId
+  Size                    PublisherTagSize?
+  Status                  String
+  Zone                    String
+}
+
+model research_sessions {
+  id          String                 @id @default(auto()) @map("_id") @db.ObjectId
+  /// Multiple data types found: String: 8.5%, Json: 2%, ResearchSessionsAnswers: 0.3%, Array(String): 0.3%, Array(Int): 0.7%, Array(ResearchSessionsAnswers): 88.1% out of 294 sampled entries
+  Answers     Json
+  Campaign    String?
+  Created     DateTime               @db.Date
+  Device      ResearchSessionsDevice
+  Fingerprint String?
+  Geo         ResearchSessionsGeo
+  IP          String?
+  ResearchID  String?
+  SessionID   String?
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  Source      Json?
+  UA          String?
+  userEmail   String?
+}
+
+model KeywordCategory {
+  id          String       @id @default(auto()) @map("_id") @db.ObjectId
+  slug        String       @unique
+  displayName String
+  description String?
+  language    Language
+  type        KeywordType?
+  keywords    Keyword[]
+}
+
+enum KeywordType {
+  PERSONAL
+  EMPLOYEE
+  COMPANY
+  DEFAULT
+  EVENT
+  PROFILE
+  SPORTS
+}
+
+enum Language {
+  ENGLISH
+  ARABIC
+  MANDARIN
+  MALAY
+  GERMAN
+  FRENCH
+}
+
+model Keyword {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  slug        String @unique
+  displayName String
+
+  keywordCategoryId String          @db.ObjectId
+  keywordCategory   KeywordCategory @relation(fields: [keywordCategoryId], references: [id], onDelete: Cascade)
+}
+
+model Cluster {
+  id                String @id @default(auto()) @map("_id") @db.ObjectId
+  associationId     String @db.ObjectId
+  keywordCategoryId String @db.ObjectId
+}
