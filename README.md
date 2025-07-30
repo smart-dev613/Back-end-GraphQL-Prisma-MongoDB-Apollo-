@@ -27,11 +27,11 @@ Prisma is deployed independently of the GraphQL API. Docker is used to deploy, s
 
 If you want to run a local instance of Prisma rather than use the services on the k8s cluster (for example, if you are testing schema changes locally):
 
-1. Run `docker login registry-intl.eu-west-1.aliyuncs.com/inslondon/prisma` and login with your GitLab details
-2. Go inside prisma folder and change `prisma.yml` endpoint to localhost:4466
-3. Ensure that `docker-compose.yaml` points to the correct database (in the `services/environemnt/databases/default/uri` field). To use the database in the k8s clusters, make sure you port-forward the mongo service, and set the URI in the `docker-compose.yaml` file to point to `mongodb://<username>:<password>@localhost:27017/platform_production` (or change as appropriate).
-3. Run `docker-compose up -d` from inside the `local` folder to deploy a local copy of prisma
-4. Run `prisma deploy` to deploy changes. This will update the schema/project in the databases
+1. Run `docker login registry-intl.eu-west-1.aliyuncs.com/inslondon/prisma` and login with your GitLab details.
+2. Go inside prisma folder and change `prisma.yml` endpoint to localhost:4466.
+3. Ensure that `docker-compose.yaml` points to the correct database (in the `services/environemnt/databases/default/uri` field). To use the database in the k8s clusters, make sure you port-forward the mongo service, and set the URI in the .`docker-compose.yaml` file to point to `mongodb://<username>:<password>@localhost:27017/platform_production` (or change as appropriate).
+3. Run `docker-compose up -d` from inside the `local` folder to deploy a local copy of prisma.
+4. Run `prisma deploy` to deploy changes. This will update the schema/project in the databases.
 
 
 ##### Revolut
